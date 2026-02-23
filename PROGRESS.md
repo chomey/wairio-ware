@@ -369,3 +369,8 @@
 - Files created/modified: `scripts/minigames/anagram_solve.gd`, `scenes/minigames/anagram_solve.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Anagram Solve race minigame extending MiniGameBase. A scrambled word is shown from a 50-word list (6-7 letter words). Player types the correct unscrambled word and presses Enter. Shows letter count as hint. Correct answers advance, wrong answers reveal the word. Fisher-Yates shuffle ensures scrambled form differs from original. Race to 8 solved. Score = words solved. Registered "Anagram Solve" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Anagram Solve"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 75: Math Sign minigame - DONE
+- Files created/modified: `scripts/minigames/math_sign.gd`, `scenes/minigames/math_sign.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Math Sign race minigame extending MiniGameBase. An equation with a missing operator is displayed (e.g., "5 ? 3 = 15"). Player presses the correct operator key (+, -, *, /) on the keyboard. Equations are generated to always have integer results. Division uses whole-number divisors, subtraction ensures non-negative results. Race to 12 correct. Score = correct answers. Supports both regular and numpad keys, with Shift+= for + and Shift+8 for *. Registered "Math Sign" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Math Sign"` passed with both host and client reaching EndGame with positive scores.

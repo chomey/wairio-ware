@@ -107,7 +107,7 @@
 - [DONE] Task 89: Tornado Dodge minigame - Survival: tornadoes wander the arena, move to avoid them (arrow keys, touched = eliminated)
 - [DONE] Task 90: Platform Jump minigame - Survival: platforms scroll left, jump between them, fall off screen = eliminated (arrow+space, fall = eliminated)
 - [DONE] Task 91: Decoy Detect minigame - Race: group of moving dots, click the one that moves differently (mouse click, 10 spotted)
-- [ ] Task 92: Sinking Ship minigame - Survival: ship fills with water, plug leaks by clicking them, ship sinks = eliminated (mouse click, ship sinks = eliminated)
+- [DONE] Task 92: Sinking Ship minigame - Survival: ship fills with water, plug leaks by clicking them, ship sinks = eliminated (mouse click, ship sinks = eliminated)
 - [ ] Task 93: Flag Raise minigame - Race: tap spacebar with correct rhythm to raise flag smoothly, off-rhythm resets (spacebar, flag reaches top)
 - [ ] Task 94: Bumper Cars minigame - Survival: move in arena, AI bumper cars roam, knocked out of bounds = eliminated (arrow keys, out of bounds = eliminated)
 - [ ] Task 95: Flip Memory minigame - Race: grid of face-down cards, flip two at a time looking for matches (mouse click, all pairs found)

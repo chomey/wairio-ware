@@ -454,3 +454,8 @@
 - Files created/modified: `scripts/minigames/decoy_detect.gd`, `scenes/minigames/decoy_detect.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Decoy Detect race minigame extending MiniGameBase. 12 dots move around a play area — all move in the same direction/speed except one decoy that moves faster and in a different direction. Player clicks the odd one out. Dots bounce off walls. Correct click spawns a new round, wrong click shows error feedback. Race to 10 spotted. Score = number of decoys spotted. Registered "Decoy Detect" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Decoy Detect"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 92: Sinking Ship minigame - DONE
+- Files created/modified: `scripts/minigames/sinking_ship.gd`, `scenes/minigames/sinking_ship.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Sinking Ship survival minigame extending MiniGameBase. Ship hull rendered with wooden planks. Water rises based on base rate + active leak count. Leaks spawn on hull walls (left, right, bottom) with pulsing visual effect and spray lines. Player clicks leaks to plug them, which also drains a small amount of water. Water level shown visually inside hull and as a side bar that color-shifts (blue/yellow/red). Ship sinking (water 100%) eliminates the player. Score = survival time in tenths of seconds. Registered "Sinking Ship" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Sinking Ship"` passed with both host and client reaching EndGame with positive scores.

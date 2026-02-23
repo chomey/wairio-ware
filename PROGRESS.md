@@ -124,3 +124,8 @@
 - Files created/modified: `scripts/minigames/pattern_match.gd`, `scenes/minigames/pattern_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Pattern Match minigame extending MiniGameBase. Two 4x4 grids side by side: left is the target pattern (random 4-8 cells colored), right is the player grid (all off). Player clicks cells on the right grid to toggle them on/off to match the target. Race to 8 patterns matched. Score = number of patterns matched. Registered "Pattern Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 26: Counting minigame - DONE
+- Files created/modified: `scripts/minigames/counting.gd`, `scenes/minigames/counting.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Counting minigame extending MiniGameBase. Random colored shapes (3-12) flash on screen for 1.5 seconds, then player types the count and presses Enter. Correct answers advance to next round. Race to 8 correct counts. Score = number of correct counts. Uses Control area for random object placement and LineEdit for input. Registered "Counting" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

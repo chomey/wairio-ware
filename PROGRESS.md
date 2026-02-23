@@ -334,3 +334,8 @@
 - Files created/modified: `scripts/minigames/hex_match.gd`, `scenes/minigames/hex_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Hex Match race minigame extending MiniGameBase. A hex color code (e.g., #A0F060) is displayed and 4 color swatches are shown. Player clicks the swatch matching the hex code. Colors are generated in steps of 16 for readable hex values. Distractors must differ by at least 48 in some channel to be visually distinct. Race to 10 correct matches. Score = matches made. Registered "Hex Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Hex Match"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 68: Countdown Catch minigame - DONE
+- Files created/modified: `scripts/minigames/countdown_catch.gd`, `scenes/minigames/countdown_catch.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Countdown Catch race minigame extending MiniGameBase. A timer counts down from a random number (3-7 seconds). Player presses spacebar at exactly 0 - closest to zero scores best. Best of 5 attempts. Score = 10000 - best_error_ms (higher = better). Attempt markers color-code results (green/yellow/red). Countdown display shifts from white to red as it approaches zero. Registered "Countdown Catch" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Countdown Catch"` passed with both host and client reaching EndGame with positive scores.

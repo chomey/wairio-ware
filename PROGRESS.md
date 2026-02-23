@@ -129,3 +129,8 @@
 - Files created/modified: `scripts/minigames/counting.gd`, `scenes/minigames/counting.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Counting minigame extending MiniGameBase. Random colored shapes (3-12) flash on screen for 1.5 seconds, then player types the count and presses Enter. Correct answers advance to next round. Race to 8 correct counts. Score = number of correct counts. Uses Control area for random object placement and LineEdit for input. Registered "Counting" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 27: Bomb Defuse minigame - DONE
+- Files created/modified: `scripts/minigames/bomb_defuse.gd`, `scenes/minigames/bomb_defuse.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Bomb Defuse minigame extending MiniGameBase. A random key sequence (3-6 letters) is displayed with the current key highlighted. Player presses keys in order to defuse the bomb. Wrong key resets the sequence. Race to 6 bombs defused. Score = number of bombs defused. Uses _unhandled_input for keyboard detection. Registered "Bomb Defuse" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

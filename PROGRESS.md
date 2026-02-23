@@ -324,3 +324,8 @@
 - Files created/modified: `scripts/minigames/spot_the_diff.gd`, `scenes/minigames/spot_the_diff.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Spot the Diff race minigame extending MiniGameBase. Two 5x5 grids shown side-by-side with identical random colors except one cell differs on the right grid. Player clicks the differing cell to score. Each correct click generates a new puzzle. Wrong clicks show brief feedback. Race to find 8 differences. Score = differences found. Registered "Spot the Diff" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Spot the Diff"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 66: Conveyor Sort minigame - DONE
+- Files created/modified: `scripts/minigames/conveyor_sort.gd`, `scenes/minigames/conveyor_sort.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Conveyor Sort race minigame extending MiniGameBase. Items slide across a conveyor belt from left to right. Player presses LEFT or RIGHT arrow to sort items into the correct bin based on category pairs (e.g., FRUIT/VEGGIE, HOT/COLD, LAND/SEA). Items must be sorted while in the decision zone (30%-70% of play area). Items that pass the zone unsorted count as wrong. Race to 15 correctly sorted. Score = items sorted correctly. Registered "Conveyor Sort" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Conveyor Sort"` passed with both host and client reaching EndGame with positive scores.

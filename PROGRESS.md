@@ -474,3 +474,8 @@
 - Files created/modified: `scripts/minigames/flip_memory.gd`, `scenes/minigames/flip_memory.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Flip Memory race minigame extending MiniGameBase. A 5x4 grid (20 cards, 10 pairs) of face-down cards with colored numbers. Player clicks to flip two cards at a time. Matching pairs stay revealed, mismatches flip back after 0.6s. Race to find all 10 pairs. Score = pairs found. Registered "Flip Memory" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Flip Memory"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 96: Firewalk minigame - DONE
+- Files created/modified: `scripts/minigames/firewalk.gd`, `scenes/minigames/firewalk.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Firewalk survival minigame extending MiniGameBase. An 8x6 grid of floor tiles where tiles randomly ignite (warning phase with pulsing yellow, then fire phase with red/orange flames). Player moves between tiles with arrow keys (grid-based with smooth interpolation). Standing on a burning tile eliminates the player. Fire spawn rate and count increase over time (1-3 tiles per wave). Warning gives 1.2s to react, fire lasts 2.5s. Score = survival time in tenths of seconds. Registered "Firewalk" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Firewalk"` passed with both host and client reaching EndGame with positive scores.

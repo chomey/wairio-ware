@@ -111,7 +111,7 @@
 - [DONE] Task 93: Flag Raise minigame - Race: tap spacebar with correct rhythm to raise flag smoothly, off-rhythm resets (spacebar, flag reaches top)
 - [DONE] Task 94: Bumper Cars minigame - Survival: move in arena, AI bumper cars roam, knocked out of bounds = eliminated (arrow keys, out of bounds = eliminated)
 - [DONE] Task 95: Flip Memory minigame - Race: grid of face-down cards, flip two at a time looking for matches (mouse click, all pairs found)
-- [ ] Task 96: Firewalk minigame - Survival: floor tiles randomly ignite, move to safe tiles (arrow keys, standing on fire = eliminated)
+- [DONE] Task 96: Firewalk minigame - Survival: floor tiles randomly ignite, move to safe tiles (arrow keys, standing on fire = eliminated)
 - [ ] Task 97: Rocket Launch minigame - Race: hold space to charge power meter, release in green zone, best of 5 attempts (spacebar, closest to center)
 - [ ] Task 98: Frequency Match minigame - Race: a tone plays as visual pattern, select the matching frequency bar (mouse click, 10 matched)
 - [ ] Task 99: Symbol Match minigame - Race: grid of symbols, find and click matching pairs (mouse click, 8 pairs cleared)

@@ -339,3 +339,8 @@
 - Files created/modified: `scripts/minigames/countdown_catch.gd`, `scenes/minigames/countdown_catch.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Countdown Catch race minigame extending MiniGameBase. A timer counts down from a random number (3-7 seconds). Player presses spacebar at exactly 0 - closest to zero scores best. Best of 5 attempts. Score = 10000 - best_error_ms (higher = better). Attempt markers color-code results (green/yellow/red). Countdown display shifts from white to red as it approaches zero. Registered "Countdown Catch" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Countdown Catch"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 69: Signal Flag minigame - DONE
+- Files created/modified: `scripts/minigames/signal_flag.gd`, `scenes/minigames/signal_flag.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Signal Flag race minigame extending MiniGameBase. A 4x4 grid of colored squares displays a flag pattern from 26 NATO phonetic alphabet flags. Player selects the matching flag name from 4 multiple-choice buttons. Race to 10 correct identifications. Score = number of correct IDs. Tracks used flags to avoid repeats. Registered "Signal Flag" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Signal Flag"` passed with both host and client reaching EndGame with positive scores.

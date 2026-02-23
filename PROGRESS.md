@@ -404,3 +404,8 @@
 - Files created/modified: `scripts/minigames/voltage_surge.gd`, `scenes/minigames/voltage_surge.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Voltage Surge survival minigame extending MiniGameBase. Player holds spacebar to charge a voltage meter that fluctuates unpredictably with sine-based noise. Must release when voltage is in the green target zone (60-85%). Releasing too low or too high fails the round. Overloading (hitting 100%) eliminates the player. Fluctuation strength increases each round. Visual vertical meter with color-coded zones (blue=low, green=target, red=danger) and charging glow effect. Score = survival time in tenths of seconds. Registered "Voltage Surge" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Voltage Surge"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 82: Wrecking Ball minigame - DONE
+- Files created/modified: `scripts/minigames/wrecking_ball.gd`, `scenes/minigames/wrecking_ball.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Wrecking Ball survival minigame extending MiniGameBase. A wrecking ball sweeps across the screen at varying heights (low or high) from random directions. Player must jump (spacebar) over low swings or duck (down arrow) under high swings. Warning indicators appear before each ball. Speed and frequency increase over time. Getting hit eliminates the player. Score = survival time in tenths of seconds. Registered "Wrecking Ball" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Wrecking Ball"` passed with both host and client reaching EndGame with positive scores.

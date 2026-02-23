@@ -97,7 +97,7 @@
 - [DONE] Task 79: Stack Tower minigame - Survival: moving block slides back and forth, press space to drop and stack, miss = eliminated (spacebar, miss the stack = eliminated)
 - [DONE] Task 80: Cliff Hanger minigame - Survival: character slides toward cliff edge, tap to brake, overshoot = eliminated (spacebar, fall off edge = eliminated)
 - [DONE] Task 81: Voltage Surge minigame - Survival: bar fluctuates, hold space to charge, release before overload (spacebar, overload = eliminated)
-- [ ] Task 82: Wrecking Ball minigame - Survival: swinging ball sweeps across screen, jump or duck to dodge (space/down, hit = eliminated)
+- [DONE] Task 82: Wrecking Ball minigame - Survival: swinging ball sweeps across screen, jump or duck to dodge (space/down, hit = eliminated)
 - [ ] Task 83: Gravity Well minigame - Survival: player orbits a center point, arrow keys adjust orbit, drift off screen = eliminated (arrow keys, off screen = eliminated)
 - [ ] Task 84: Thermal Rise minigame - Survival: character floats upward through gaps in platforms, hit a platform = eliminated (arrow keys, hit platform = eliminated)
 - [ ] Task 85: Rail Grind minigame - Survival: character on rails, press up/down to switch tracks to avoid obstacles (arrow keys, hit obstacle = eliminated)

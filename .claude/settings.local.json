@@ -7,7 +7,7 @@
       "Read(~/.ssh/**)",
       "Read(~/.aws/**)"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "bypassPermissions"
   },
   "sandbox": {
     "enabled": true,

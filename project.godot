@@ -10,24 +10,10 @@ config_version=5
 
 [application]
 
-config/name="game1"
-run/main_scene="res://scenes/main_menu.tscn"
+config/name="WarioParty"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-GameManager="*res://scripts/game_manager.gd"
-
-[dotnet]
-
-project/assembly_name="game1"
-
-[physics]
-
-3d/physics_engine="Jolt Physics"
-
 [rendering]
 
-rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"

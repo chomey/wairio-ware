@@ -56,7 +56,7 @@
 - [DONE] Task 43: Shrinking Arena minigame - Survival: play area shrinks over time, stay inside with arrow keys (arrow keys, touch boundary = eliminated)
 - [DONE] Task 44: Hot Potato minigame - Survival: timer counts down, press space to throw, last holder loses (spacebar, holding when timer hits 0 = eliminated)
 - [DONE] Task 45: Tightrope Walk minigame - Survival: character auto-walks, press left/right to balance (arrow keys, fall off = eliminated)
-- [ ] Task 46: Rising Water minigame - Survival: platforms at various heights, jump between them as water rises (arrow+space, submerged = eliminated)
+- [DONE] Task 46: Rising Water minigame - Survival: platforms at various heights, jump between them as water rises (arrow+space, submerged = eliminated)
 - [ ] Task 47: Minefield minigame - Survival: grid of cells, click to reveal safe/mine, clear a path across (mouse click, hit mine = eliminated)
 - [ ] Task 48: Asteroid Dodge minigame - Survival: ship moves in 2D, dodge asteroids from all sides (arrow keys, hit by asteroid = eliminated)
 - [ ] Task 49: Conveyor Chaos minigame - Survival: stand on conveyors moving in different directions, stay in bounds (arrow keys, pushed off edge = eliminated)

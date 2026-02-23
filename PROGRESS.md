@@ -144,3 +144,8 @@
 - Files created/modified: `scripts/minigames/word_scramble.gd`, `scenes/minigames/word_scramble.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Word Scramble minigame extending MiniGameBase. A word from a 50-word list is scrambled (Fisher-Yates shuffle, guaranteed different from original). Player types the unscrambled word and presses Enter. Correct answers advance to next word, wrong answers reveal the answer. Race to 5 correct words. Score = number of correct words. Case-insensitive comparison. Tracks used words to avoid repeats. Registered "Word Scramble" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 30: Morse Decode minigame - DONE
+- Files created/modified: `scripts/minigames/morse_decode.gd`, `scenes/minigames/morse_decode.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Morse Decode minigame extending MiniGameBase. Morse code patterns (dots and dashes) are displayed for a random letter. Player presses the matching letter key. Correct presses advance to the next pattern, wrong presses show a hint. Race to 10 correct decodes. Score = number of letters decoded. Full A-Z morse code dictionary. Uses _unhandled_input for keyboard detection. Registered "Morse Decode" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

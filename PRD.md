@@ -41,7 +41,7 @@ Highest scoring players get the most points, for each game, summed at the end.
 “Score game based on closeness”,
 “Increment full game score”
     ],
-    "passes": false
+    “passes”: true
   },
 {
     "category": "feature",

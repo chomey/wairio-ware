@@ -329,3 +329,8 @@
 - Files created/modified: `scripts/minigames/conveyor_sort.gd`, `scenes/minigames/conveyor_sort.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Conveyor Sort race minigame extending MiniGameBase. Items slide across a conveyor belt from left to right. Player presses LEFT or RIGHT arrow to sort items into the correct bin based on category pairs (e.g., FRUIT/VEGGIE, HOT/COLD, LAND/SEA). Items must be sorted while in the decision zone (30%-70% of play area). Items that pass the zone unsorted count as wrong. Race to 15 correctly sorted. Score = items sorted correctly. Registered "Conveyor Sort" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Conveyor Sort"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 67: Hex Match minigame - DONE
+- Files created/modified: `scripts/minigames/hex_match.gd`, `scenes/minigames/hex_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Hex Match race minigame extending MiniGameBase. A hex color code (e.g., #A0F060) is displayed and 4 color swatches are shown. Player clicks the swatch matching the hex code. Colors are generated in steps of 16 for readable hex values. Distractors must differ by at least 48 in some channel to be visually distinct. Race to 10 correct matches. Score = matches made. Registered "Hex Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Hex Match"` passed with both host and client reaching EndGame with positive scores.

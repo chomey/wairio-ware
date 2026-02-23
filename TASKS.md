@@ -80,7 +80,7 @@
 - [DONE] Task 64: Color Flood minigame - Race: fill a grid by selecting colors to expand from the corner, fewest moves = best score (mouse click, clear 5 boards)
 - [DONE] Task 65: Spot the Diff minigame - Race: two grids shown side-by-side, click the cell that differs (mouse click, 8 found)
 - [DONE] Task 66: Conveyor Sort minigame - Race: items slide across, press left/right to sort into correct bins (arrow keys, 15 sorted)
-- [ ] Task 67: Hex Match minigame - Race: match hex color codes to displayed colors from multiple choices (mouse click, 10 matched)
+- [DONE] Task 67: Hex Match minigame - Race: match hex color codes to displayed colors from multiple choices (mouse click, 10 matched)
 - [ ] Task 68: Countdown Catch minigame - Race: timer counts down from random number, press space at exactly 0, closest to zero scores best (spacebar, best of 5 attempts)
 - [ ] Task 69: Signal Flag minigame - Race: shown a flag pattern of colored squares, select the matching name (mouse click, 10 identified)
 - [ ] Task 70: Speed Clicker minigame - Race: targets appear in sequence, click only GREEN ones, avoid RED ones (mouse click, 15 correct)

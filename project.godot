@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="WarioParty"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+NetworkManager="*res://scripts/autoloads/network_manager.gd"
+GameManager="*res://scripts/autoloads/game_manager.gd"
+
+[dotnet]
+
+project/assembly_name="WarioParty"
 
 [rendering]
 

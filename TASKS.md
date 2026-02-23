@@ -4,7 +4,7 @@
 - [DONE] Task 1: NetworkManager autoload - host/join/disconnect, player registry, RPC sync
 - [DONE] Task 2: GameManager autoload - score tracking, round progression, minigame registry, scene transitions
 - [DONE] Task 3: MiniGameBase class - countdown timer, game timer, score submission, _on_game_start/_on_game_end hooks
-- [ ] Task 4: Register autoloads in project.godot, set main scene
+- [DONE] Task 4: Register autoloads in project.godot, set main scene
 
 ### Phase 2: UI Screens
 - [ ] Task 5: MainMenu scene+script - host/join buttons, name input, IP input

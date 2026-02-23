@@ -184,3 +184,8 @@
 - Files created/modified: `scripts/minigames/maze_solver.gd`, `scenes/minigames/maze_solver.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Maze Solver minigame extending MiniGameBase. An 11x11 grid maze is generated using recursive backtracker algorithm (guarantees solvability). Player (green) navigates with arrow keys from top-left to exit (red) at bottom-right. Each solved maze generates a new one. Race to 3 mazes solved. Score = number of mazes solved. Registered "Maze Solver" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 38: Path Tracer minigame - DONE
+- Files created/modified: `scripts/minigames/path_tracer.gd`, `scenes/minigames/path_tracer.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Path Tracer minigame extending MiniGameBase. 8 numbered waypoints are scattered at random non-overlapping positions in the play area. Player clicks them in order (1, 2, 3...). Completing all 8 waypoints finishes one path and generates a new one. Race to 3 paths traced. Score = number of paths completed. Wrong clicks show a hint. Registered "Path Tracer" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

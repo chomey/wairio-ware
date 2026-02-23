@@ -389,3 +389,8 @@
 - Files created/modified: `scripts/minigames/shadow_match.gd`, `scenes/minigames/shadow_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Shadow Match race minigame extending MiniGameBase. A dark silhouette of a shape (from 10 types: circle, square, triangle, diamond, star, cross, pentagon, hexagon, arrow, heart) is displayed at the top. Four colored shape options are shown below. Player clicks the matching shape. Shapes are drawn using custom _draw with parametric curves and polygon rendering. Race to 10 correct matches. Score = matches made. Registered "Shadow Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Shadow Match"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 79: Stack Tower minigame - DONE
+- Files created/modified: `scripts/minigames/stack_tower.gd`, `scenes/minigames/stack_tower.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Stack Tower survival minigame extending MiniGameBase. A white block slides back and forth across the top of the stack. Player presses spacebar to drop it. The block is trimmed to the overlapping portion with the block below — miss entirely and you're eliminated. Stack grows upward with camera scrolling. Block speed increases with each successful drop. Blocks are colored by hue rotation for visual variety. Score = survival time in tenths of seconds. Registered "Stack Tower" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Stack Tower"` passed with both host and client reaching EndGame with positive scores.

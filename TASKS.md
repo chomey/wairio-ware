@@ -36,7 +36,7 @@
 - [DONE] Task 25: Pattern Match minigame - Race: two grids shown, click cells to make them match (mouse click, 8 patterns)
 - [DONE] Task 26: Counting minigame - Race: objects flash on screen briefly, type the count (keyboard, 8 correct counts)
 - [DONE] Task 27: Bomb Defuse minigame - Race: press displayed key sequence to defuse bombs (keyboard, 6 bombs defused)
-- [ ] Task 28: Safe Cracker minigame - Race: guess 3-digit code with hot/cold hints after each attempt (keyboard, crack the code)
+- [DONE] Task 28: Safe Cracker minigame - Race: guess 3-digit code with hot/cold hints after each attempt (keyboard, crack the code)
 - [ ] Task 29: Word Scramble minigame - Race: unscramble anagram, type correct word (keyboard, 5 words)
 - [ ] Task 30: Morse Decode minigame - Race: short/long beep patterns shown, type the letter (keyboard, 10 letters)
 - [ ] Task 31: Pixel Painter minigame - Race: fill in marked cells in a grid by clicking them (mouse click, fill 20 cells)

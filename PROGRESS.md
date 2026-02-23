@@ -134,3 +134,8 @@
 - Files created/modified: `scripts/minigames/bomb_defuse.gd`, `scenes/minigames/bomb_defuse.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Bomb Defuse minigame extending MiniGameBase. A random key sequence (3-6 letters) is displayed with the current key highlighted. Player presses keys in order to defuse the bomb. Wrong key resets the sequence. Race to 6 bombs defused. Score = number of bombs defused. Uses _unhandled_input for keyboard detection. Registered "Bomb Defuse" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 28: Safe Cracker minigame - DONE
+- Files created/modified: `scripts/minigames/safe_cracker.gd`, `scenes/minigames/safe_cracker.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Safe Cracker minigame extending MiniGameBase. A random 3-digit code is generated. Player types 3-digit guesses and presses Enter. Each digit gets feedback: HIT (correct digit, correct position), CLOSE (correct digit, wrong position), MISS (wrong digit). Shows last 5 guesses as history. Race to 3 codes cracked. Score = number of codes cracked. Uses LineEdit for input with text_submitted signal. Registered "Safe Cracker" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

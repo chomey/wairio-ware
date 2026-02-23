@@ -254,3 +254,13 @@
 - Files created/modified: `scripts/minigames/simon_says.gd`, `scenes/minigames/simon_says.tscn`, `scripts/autoloads/game_manager.gd`, `tests/run_integration.sh`
 - What was done: Created Simon Says race minigame extending MiniGameBase. Four colored panels (blue=UP, green=DOWN, red=LEFT, yellow=RIGHT) flash in sequence; player repeats with arrow keys. Sequence grows each round (starting length 2). Race to complete 10 rounds. Wrong input resets the current sequence attempt. Also fixed shell quoting bug in run_integration.sh where game names with spaces were being split into separate args.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Simon Says"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 52: Whack-a-Mole minigame - DONE
+- Files created/modified: `scripts/minigames/whack_a_mole.gd`, `scenes/minigames/whack_a_mole.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Whack-a-Mole race minigame extending MiniGameBase. Colored squares pop up randomly in a 4x4 grid, player clicks them before they disappear. Race to 20 hits. Registered "Whack-a-Mole" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Registered in GameManager.
+
+## Task 53: Fruit Catcher minigame - DONE
+- Files created/modified: `scripts/minigames/fruit_catcher.gd`, `scenes/minigames/fruit_catcher.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Fruit Catcher race minigame extending MiniGameBase. Player moves a basket left/right with arrow keys to catch falling green fruit while avoiding red bad items (-2 penalty). Fall speed increases over time. Race to 15 caught. Registered "Fruit Catcher" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (only harmless CA cert error). Integration test `bash tests/run_integration.sh "Fruit Catcher"` passed with both host and client reaching EndGame with positive scores.

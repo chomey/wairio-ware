@@ -64,3 +64,8 @@
 - Files created/modified: `scripts/minigames/target_click.gd`, `scenes/minigames/target_click.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Target Click minigame extending MiniGameBase. Players click on a target button ("X") that appears at random positions within a target area. Each click scores a point and spawns the target at a new random position. Score = number of targets clicked within 10 seconds. Registered "Target Click" in GameManager.MINIGAME_REGISTRY.
 - Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.
+
+## Task 14: Color Match minigame - DONE
+- Files created/modified: `scripts/minigames/color_match.gd`, `scenes/minigames/color_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Color Match minigame (Stroop test) extending MiniGameBase. A color word (RED, GREEN, BLUE, YELLOW, PURPLE) is displayed in a random color. Players press "MATCH" if the word matches the display color, or "NO MATCH" if it doesn't. 50% chance of match per prompt. Score = number of correct answers within 10 seconds. Registered "Color Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.

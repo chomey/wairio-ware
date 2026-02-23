@@ -55,10 +55,8 @@ If `TASKS.md` does not exist, create it with the task list below.
 - Every minigame extends MiniGameBase and registers itself in GameManager.MINIGAME_REGISTRY
 
 ### How to Verify
-After completing each task, run:
-```bash
-godot --headless --check-only
-```
+Run godot and test with two clients.
+
 If that is not available or errors, at minimum:
 - Read back every file you created/modified and confirm no syntax errors
 - Confirm all scene node paths referenced in scripts match the .tscn structure

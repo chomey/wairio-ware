@@ -274,3 +274,8 @@
 - Files created/modified: `scripts/minigames/light_switch.gd`, `scenes/minigames/light_switch.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Light Switch race minigame extending MiniGameBase. Two 4x4 grids side by side: target pattern (5-10 random lit cells) and player grid (all off). Player clicks cells to toggle individual lights to match the target. Race to solve 5 puzzles. Score = puzzles solved. Registered "Light Switch" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Light Switch"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 56: Ice Breaker minigame - DONE
+- Files created/modified: `scripts/minigames/ice_breaker.gd`, `scenes/minigames/ice_breaker.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Ice Breaker race minigame extending MiniGameBase. A power bar oscillates a white indicator back and forth; player presses spacebar when the indicator is in the green zone to break an ice block. Green zone repositions randomly after each break and shrinks as progress increases. Speed increases with each block broken. Miss penalty resets indicator position with a brief pause. Race to 12 blocks broken. Registered "Ice Breaker" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Ice Breaker"` passed with both host and client reaching EndGame with positive scores.

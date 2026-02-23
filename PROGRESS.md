@@ -214,3 +214,8 @@
 - Files created/modified: `scripts/minigames/shrinking_arena.gd`, `scenes/minigames/shrinking_arena.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Shrinking Arena survival minigame extending MiniGameBase. Play area shrinks over time from all sides with accelerating speed. Player moves with arrow keys to stay inside the shrinking boundary. Arena color shifts as it shrinks. Touching the boundary eliminates the player. Score = survival time in tenths of seconds. Registered "Shrinking Arena" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 44: Hot Potato minigame - DONE
+- Files created/modified: `scripts/minigames/hot_potato.gd`, `scenes/minigames/hot_potato.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Hot Potato survival minigame extending MiniGameBase. A potato with a fuse timer counts down; player presses space to throw it before it explodes. Each successful throw resets with a shorter fuse (starts at 3s, shrinks by 0.15s per throw, minimum 0.8s). Fuse bar and potato color change from green/yellow to orange/red as time runs out. If the potato explodes while held, the player is eliminated. Score = survival time in tenths of seconds. Registered "Hot Potato" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

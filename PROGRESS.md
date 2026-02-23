@@ -119,3 +119,8 @@
 - Files created/modified: `scripts/minigames/speed_spell.gd`, `scenes/minigames/speed_spell.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Speed Spell minigame extending MiniGameBase. Single letters (A-Z) are displayed one at a time, player types the matching key as fast as possible. Correct presses advance to the next letter, wrong presses show the correct letter. Race to 25 correct letters. Score = number of correct letters typed. Uses _unhandled_input for keyboard detection with keycode-to-letter conversion. Registered "Speed Spell" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 25: Pattern Match minigame - DONE
+- Files created/modified: `scripts/minigames/pattern_match.gd`, `scenes/minigames/pattern_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Pattern Match minigame extending MiniGameBase. Two 4x4 grids side by side: left is the target pattern (random 4-8 cells colored), right is the player grid (all off). Player clicks cells on the right grid to toggle them on/off to match the target. Race to 8 patterns matched. Score = number of patterns matched. Registered "Pattern Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

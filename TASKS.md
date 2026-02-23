@@ -33,7 +33,7 @@
 - [DONE] Task 22: Odd One Out minigame - Race: grid of colored rects, click the different one (mouse click, 10 rounds)
 - [DONE] Task 23: Number Sort minigame - Race: click scattered numbers in ascending order (mouse click, sort 10 numbers)
 - [DONE] Task 24: Speed Spell minigame - Race: type single displayed letters as fast as possible (keyboard, 25 letters)
-- [ ] Task 25: Pattern Match minigame - Race: two grids shown, click cells to make them match (mouse click, 8 patterns)
+- [DONE] Task 25: Pattern Match minigame - Race: two grids shown, click cells to make them match (mouse click, 8 patterns)
 - [ ] Task 26: Counting minigame - Race: objects flash on screen briefly, type the count (keyboard, 8 correct counts)
 - [ ] Task 27: Bomb Defuse minigame - Race: press displayed key sequence to defuse bombs (keyboard, 6 bombs defused)
 - [ ] Task 28: Safe Cracker minigame - Race: guess 3-digit code with hot/cold hints after each attempt (keyboard, crack the code)

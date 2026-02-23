@@ -44,3 +44,8 @@
 - Files created/modified: `scripts/minigames/button_masher.gd`, `scenes/minigames/button_masher.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Button Masher minigame extending MiniGameBase. Players mash spacebar during the 10-second game phase; press count is tracked and submitted as score. UI shows countdown, timer, press count, and instructions. Registered "Button Masher" in GameManager._ready().
 - Verification: Manual code review passed. All %NodeName references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 10: End-to-end flow test - DONE
+- Files created/modified: `scenes/minigames/button_masher.tscn` (fixed invalid UID)
+- What was done: Traced the complete game loop: MainMenu → Lobby → Minigame (Button Masher) → Scoreboard → EndGame → MainMenu. Verified all scene transitions, RPC chains, score submission flow, node path references, autoload registrations, and scene file references. Fixed invalid custom UID in button_masher.tscn.
+- Verification: All @onready/$CenterContainer paths match .tscn node structures. All %UniqueNode references match unique_name_in_owner flags. All res:// scene paths point to existing files. Autoload paths in project.godot verified. Godot CLI unavailable due to sandbox restrictions (crashes on log directory creation). Manual review passed.

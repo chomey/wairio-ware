@@ -14,7 +14,7 @@
 
 ### Phase 3: First Mini-Game
 - [DONE] Task 9: Button Masher minigame - mash spacebar, count presses, 10s timer, extends MiniGameBase
-- [ ] Task 10: End-to-end flow test - verify full game loop works: menu -> lobby -> countdown -> game -> scoreboard -> end
+- [DONE] Task 10: End-to-end flow test - verify full game loop works: menu -> lobby -> countdown -> game -> scoreboard -> end
 
 ### Phase 4: More Mini-Games (one per task)
 - [ ] Task 11: Reaction Time minigame

@@ -79,3 +79,8 @@
 - Files created/modified: `scripts/minigames/dodge_falling.gd`, `scenes/minigames/dodge_falling.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Dodge Falling minigame extending MiniGameBase. Player controls a green ColorRect at the bottom of a play area, moving left/right with arrow keys to dodge red falling obstacles. Obstacles spawn at random X positions and fall downward, increasing in speed and frequency over time. Score = number of obstacles that pass below without hitting the player. Getting hit ends the game early. Registered "Dodge Falling" in GameManager.MINIGAME_REGISTRY.
 - Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.
+
+## Task 17: Rhythm Tap minigame - DONE
+- Files created/modified: `scripts/minigames/rhythm_tap.gd`, `scenes/minigames/rhythm_tap.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Rhythm Tap minigame extending MiniGameBase. Cyan beat indicators scroll down a track toward a white hit zone. Player presses spacebar to hit beats in time. Perfect hits (within 80ms) score 3 points, Good hits (within 200ms) score 1 point, misses score 0. Features combo tracking display. BPM set to 100 with 1.2s lead time for beat visibility. Registered "Rhythm Tap" in GameManager.MINIGAME_REGISTRY.
+- Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.

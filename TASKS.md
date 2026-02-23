@@ -23,4 +23,4 @@
 - [DONE] Task 14: Color Match minigame
 - [DONE] Task 15: Memory Sequence minigame
 - [DONE] Task 16: Dodge Falling minigame
-- [ ] Task 17: Rhythm Tap minigame
+- [DONE] Task 17: Rhythm Tap minigame

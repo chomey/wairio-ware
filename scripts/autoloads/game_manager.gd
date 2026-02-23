@@ -42,6 +42,7 @@ func _ready() -> void:
 	register_minigame("Color Match", "res://scenes/minigames/color_match.tscn")
 	register_minigame("Memory Sequence", "res://scenes/minigames/memory_sequence.tscn")
 	register_minigame("Dodge Falling", "res://scenes/minigames/dodge_falling.tscn")
+	register_minigame("Rhythm Tap", "res://scenes/minigames/rhythm_tap.tscn")
 
 
 ## Start a new game session. Called by host only.

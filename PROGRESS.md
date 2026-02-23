@@ -319,3 +319,8 @@
 - Files created/modified: `scripts/minigames/color_flood.gd`, `scenes/minigames/color_flood.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Color Flood race minigame extending MiniGameBase. An 8x8 grid of randomly colored cells (5 colors). Player clicks color buttons to flood-fill from the top-left corner, expanding all connected same-color cells to the chosen color. Goal is to make the entire grid one color. BFS flood fill algorithm. Race to clear 5 boards. Score = boards cleared. Registered "Color Flood" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Color Flood"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 65: Spot the Diff minigame - DONE
+- Files created/modified: `scripts/minigames/spot_the_diff.gd`, `scenes/minigames/spot_the_diff.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Spot the Diff race minigame extending MiniGameBase. Two 5x5 grids shown side-by-side with identical random colors except one cell differs on the right grid. Player clicks the differing cell to score. Each correct click generates a new puzzle. Wrong clicks show brief feedback. Race to find 8 differences. Score = differences found. Registered "Spot the Diff" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Spot the Diff"` passed with both host and client reaching EndGame with positive scores.

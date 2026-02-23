@@ -78,7 +78,7 @@
 - [DONE] Task 62: Pipe Connect minigame - Race: rotate pipe tiles to connect start to end (mouse click, 5 puzzles solved)
 - [DONE] Task 63: Falling Letters minigame - Race: letters rain down, type them before they hit the bottom (keyboard, 25 typed)
 - [DONE] Task 64: Color Flood minigame - Race: fill a grid by selecting colors to expand from the corner, fewest moves = best score (mouse click, clear 5 boards)
-- [ ] Task 65: Spot the Diff minigame - Race: two grids shown side-by-side, click the cell that differs (mouse click, 8 found)
+- [DONE] Task 65: Spot the Diff minigame - Race: two grids shown side-by-side, click the cell that differs (mouse click, 8 found)
 - [ ] Task 66: Conveyor Sort minigame - Race: items slide across, press left/right to sort into correct bins (arrow keys, 15 sorted)
 - [ ] Task 67: Hex Match minigame - Race: match hex color codes to displayed colors from multiple choices (mouse click, 10 matched)
 - [ ] Task 68: Countdown Catch minigame - Race: timer counts down from random number, press space at exactly 0, closest to zero scores best (spacebar, best of 5 attempts)

@@ -70,7 +70,7 @@
 - [DONE] Task 54: Treasure Dig minigame - Race: mash keys to dig through layers of dirt (spacebar, reach depth 10)
 - [DONE] Task 55: Light Switch minigame - Race: grid of lights, click to toggle, match the target pattern (mouse click, 5 puzzles solved)
 - [DONE] Task 56: Ice Breaker minigame - Race: tap spacebar with correct timing to break ice blocks in sequence (spacebar, 12 blocks broken)
-- [ ] Task 57: Bubble Pop minigame - Race: bubbles float up with letters on them, type the letter to pop (keyboard, 20 popped)
+- [DONE] Task 57: Bubble Pop minigame - Race: bubbles float up with letters on them, type the letter to pop (keyboard, 20 popped)
 - [ ] Task 58: Mirror Draw minigame - Race: arrow sequence shown, input it in reverse order (arrow keys, 8 sequences reversed)
 - [ ] Task 59: Rotation Lock minigame - Race: rotating dial with pointer, press space when aligned with target (spacebar, 10 targets hit)
 - [ ] Task 60: Word Chain minigame - Race: given a word, type a word starting with its last letter (keyboard, 8 chains)

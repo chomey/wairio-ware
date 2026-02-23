@@ -279,3 +279,8 @@
 - Files created/modified: `scripts/minigames/ice_breaker.gd`, `scenes/minigames/ice_breaker.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Ice Breaker race minigame extending MiniGameBase. A power bar oscillates a white indicator back and forth; player presses spacebar when the indicator is in the green zone to break an ice block. Green zone repositions randomly after each break and shrinks as progress increases. Speed increases with each block broken. Miss penalty resets indicator position with a brief pause. Race to 12 blocks broken. Registered "Ice Breaker" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Ice Breaker"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 57: Bubble Pop minigame - DONE
+- Files created/modified: `scripts/minigames/bubble_pop.gd`, `scenes/minigames/bubble_pop.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Bubble Pop race minigame extending MiniGameBase. Bubbles with random letters (A-Z) float upward from the bottom of a play area. Player types the letter on a bubble to pop it, targeting the lowest matching bubble first. Bubbles that float off the top are removed. Race to 20 popped. Score = number of bubbles popped. Uses custom draw for bubble rendering with circle + letter. Registered "Bubble Pop" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Bubble Pop"` passed with both host and client reaching EndGame with positive scores.

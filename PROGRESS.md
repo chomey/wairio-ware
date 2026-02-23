@@ -284,3 +284,8 @@
 - Files created/modified: `scripts/minigames/bubble_pop.gd`, `scenes/minigames/bubble_pop.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Bubble Pop race minigame extending MiniGameBase. Bubbles with random letters (A-Z) float upward from the bottom of a play area. Player types the letter on a bubble to pop it, targeting the lowest matching bubble first. Bubbles that float off the top are removed. Race to 20 popped. Score = number of bubbles popped. Uses custom draw for bubble rendering with circle + letter. Registered "Bubble Pop" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Bubble Pop"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 58: Mirror Draw minigame - DONE
+- Files created/modified: `scripts/minigames/mirror_draw.gd`, `scenes/minigames/mirror_draw.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Mirror Draw race minigame extending MiniGameBase. An arrow sequence is shown one at a time (flash + pause), then the full sequence is displayed and the player must input it in reverse order using arrow keys. Sequence starts at length 3 and grows by 1 every 3 completions. Wrong input resets the current attempt. Race to 8 sequences reversed. Score = sequences reversed. Registered "Mirror Draw" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Mirror Draw"` passed with both host and client reaching EndGame with positive scores.

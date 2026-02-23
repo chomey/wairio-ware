@@ -35,7 +35,7 @@ var _game_active: bool = false
 
 
 func _ready() -> void:
-	pass
+	register_minigame("Button Masher", "res://scenes/minigames/button_masher.tscn")
 
 
 ## Start a new game session. Called by host only.

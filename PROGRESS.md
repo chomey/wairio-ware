@@ -39,3 +39,8 @@
 - Files created: `scenes/end_game.tscn`, `scripts/ui/end_game.gd`
 - What was done: Built EndGame UI with "Game Over!" title, winner display (handles ties), final standings table with rank/player/score columns sorted by cumulative score descending (ties share rank), and a "Return to Menu" button that calls GameManager.return_to_menu(). Rankings are dynamically built from GameManager.cumulative_scores.
 - Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Scene path matches GameManager._load_end_game() reference. Godot CLI unavailable in sandbox.
+
+## Task 9: Button Masher minigame - DONE
+- Files created/modified: `scripts/minigames/button_masher.gd`, `scenes/minigames/button_masher.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Button Masher minigame extending MiniGameBase. Players mash spacebar during the 10-second game phase; press count is tracked and submitted as score. UI shows countdown, timer, press count, and instructions. Registered "Button Masher" in GameManager._ready().
+- Verification: Manual code review passed. All %NodeName references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

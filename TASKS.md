@@ -13,7 +13,7 @@
 - [DONE] Task 8: EndGame scene+script - final standings, winner display, return to menu button
 
 ### Phase 3: First Mini-Game
-- [ ] Task 9: Button Masher minigame - mash spacebar, count presses, 10s timer, extends MiniGameBase
+- [DONE] Task 9: Button Masher minigame - mash spacebar, count presses, 10s timer, extends MiniGameBase
 - [ ] Task 10: End-to-end flow test - verify full game loop works: menu -> lobby -> countdown -> game -> scoreboard -> end
 
 ### Phase 4: More Mini-Games (one per task)

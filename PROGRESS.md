@@ -194,3 +194,8 @@
 - Files created/modified: `scripts/minigames/equation_builder.gd`, `scenes/minigames/equation_builder.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Equation Builder minigame extending MiniGameBase. A target number is shown along with available numbers. Player types a mathematical expression using +, -, * that evaluates to the target. Supports 2-operand and 3-operand puzzles with proper operator precedence evaluation. Race to 5 correct equations. Score = number of correct equations. Registered "Equation Builder" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 40: Balancing Act minigame - DONE
+- Files created/modified: `scripts/minigames/balancing_act.gd`, `scenes/minigames/balancing_act.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Balancing Act survival minigame extending MiniGameBase. A balance bar drifts randomly left/right with increasing intensity over time. Player presses left/right arrow keys to keep it centered. Bar changes color (green/yellow/red) based on proximity to edges. Hitting either edge eliminates the player. Score = survival time in tenths of seconds. Drift direction changes every 1.5s with bias away from center. Registered "Balancing Act" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

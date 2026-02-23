@@ -50,7 +50,7 @@
 - [DONE] Task 39: Equation Builder minigame - Race: given a target number and operators, type the equation (keyboard, 5 equations)
 
 ### Phase 6: Expanded Mini-Games (Survival Games)
-- [ ] Task 40: Balancing Act minigame - Survival: keep a bar centered with left/right as it drifts (arrow keys, bar hits edge = eliminated)
+- [DONE] Task 40: Balancing Act minigame - Survival: keep a bar centered with left/right as it drifts (arrow keys, bar hits edge = eliminated)
 - [ ] Task 41: Floor is Lava minigame - Survival: platforms shrink/disappear, move to stay on solid ground (arrow keys, fall off = eliminated)
 - [ ] Task 42: Gravity Flip minigame - Survival: auto-scrolling platformer, press space to flip gravity (spacebar, hit obstacle = eliminated)
 - [ ] Task 43: Shrinking Arena minigame - Survival: play area shrinks over time, stay inside with arrow keys (arrow keys, touch boundary = eliminated)

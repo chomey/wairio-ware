@@ -489,3 +489,8 @@
 - Files created/modified: `scripts/minigames/frequency_match.gd`, `scenes/minigames/frequency_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Frequency Match race minigame extending MiniGameBase. A visual sine wave animates at the target frequency. Player selects the matching frequency bar from 4 choices with varying heights and colors (blue=low, red=high). Frequencies range from 1.0-6.0 Hz with bars sized proportionally. Wrong clicks show error feedback. Race to 10 correct matches. Score = matches made. Registered "Frequency Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Frequency Match"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 99: Symbol Match minigame - DONE
+- Files created/modified: `scripts/minigames/symbol_match.gd`, `scenes/minigames/symbol_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Symbol Match race minigame extending MiniGameBase. A 4x4 grid of face-up symbols (8 pairs using @, #, $, %, &, *, +, =) with distinct colors. Player clicks two matching symbols to clear them. Selected cards get a colored border highlight, mismatches flash red briefly. Race to clear all 8 pairs. Score = pairs cleared. Registered "Symbol Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Symbol Match"` passed with both host and client reaching EndGame with positive scores.

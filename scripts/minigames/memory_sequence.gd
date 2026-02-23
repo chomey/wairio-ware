@@ -158,13 +158,10 @@ func _on_panel_pressed(panel_idx: int) -> void:
 			if game_active and is_inside_tree():
 				_add_to_sequence_and_show()
 	else:
-		# Wrong panel - restart with new sequence
-		instruction_label.text = "Wrong! Starting over..."
+		# Wrong panel - eliminated
+		instruction_label.text = "Wrong! Eliminated!"
 		_set_panels_disabled(true)
-		_sequence.clear()
-		await get_tree().create_timer(0.7).timeout
-		if game_active and is_inside_tree():
-			_add_to_sequence_and_show()
+		mark_completed(_score)
 
 
 func _set_panel_lit(idx: int) -> void:

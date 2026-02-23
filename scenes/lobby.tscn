@@ -67,10 +67,6 @@ autowrap_mode = 2
 layout_mode = 2
 custom_minimum_size = Vector2(0, 10)
 
-[node name="StartButton" type="Button" parent="CenterContainer"]
-layout_mode = 2
-text = "Start Game"
-
 [node name="BackButton" type="Button" parent="CenterContainer"]
 layout_mode = 2
 text = "Back to Menu"

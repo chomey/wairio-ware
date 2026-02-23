@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 		if obs_rect.intersects(player_rect_area):
 			_game_over = true
 			instruction_label.text = "HIT! Game Over!"
-			submit_score(_score)
+			mark_completed(_score)
 			return
 
 		# Check if obstacle passed below play area

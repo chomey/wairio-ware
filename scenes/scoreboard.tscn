@@ -78,7 +78,3 @@ theme_override_constants/separation = 6
 [node name="Spacer2" type="Control" parent="CenterContainer"]
 layout_mode = 2
 custom_minimum_size = Vector2(0, 8)
-
-[node name="ContinueButton" type="Button" parent="CenterContainer"]
-layout_mode = 2
-text = "Continue"

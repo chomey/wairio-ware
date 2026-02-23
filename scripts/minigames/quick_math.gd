@@ -15,6 +15,8 @@ extends MiniGameBase
 ## Current correct answer
 var _correct_answer: int = 0
 
+const COMPLETION_TARGET: int = 10
+
 ## Number of correct answers
 var _correct_count: int = 0
 
@@ -93,6 +95,9 @@ func _on_answer_submitted(text: String) -> void:
 		_correct_count += 1
 		feedback_label.text = "Correct!"
 		score_label.text = "Correct: " + str(_correct_count)
+		if _correct_count >= COMPLETION_TARGET:
+			mark_completed(_correct_count)
+			return
 	else:
 		feedback_label.text = "Wrong! Answer: " + str(_correct_answer)
 

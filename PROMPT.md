@@ -55,14 +55,32 @@ If `TASKS.md` does not exist, create it with the task list below.
 - Every minigame extends MiniGameBase and registers itself in GameManager.MINIGAME_REGISTRY
 
 ### How to Verify
-Run godot and test with two clients.
+After completing each task, run through this full checklist. Do NOT skip any step.
 
-If that is not available or errors, at minimum:
-- Read back every file you created/modified and confirm no syntax errors
-- Confirm all scene node paths referenced in scripts match the .tscn structure
-- Confirm all autoload paths in project.godot point to real files
+1. **Run Godot**: Execute the project headless to catch load/parse errors:
+```bash
+/Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --quit-after 5 --log-file ./godot_test.log 2>&1
+cat godot_test.log
+rm -f godot_test.log
+```
+Ignore the CA certificate error (sandbox, harmless). Any other ERROR or crash means the task is NOT done — fix it first.
 
-Fix any errors before marking the task done.
+2. **Syntax check**: Read back every file you created or modified. Confirm no GDScript parse errors.
+2. **Scene-script consistency**: Every `$NodePath` or `@onready var x = $Path` in a .gd file must match a node in the corresponding .tscn file.
+3. **Autoload paths**: Every path in project.godot `[autoload]` must point to a file that exists.
+4. **Registry integrity**: `GameManager._ready()` must ONLY register minigames whose .tscn AND .gd files exist in the project RIGHT NOW. Never register future/unbuilt minigames.
+5. **Array bounds safety**: Any `array[index]` access must be guarded — verify the array cannot be empty at that point. Trace the code path that populates the array and confirm it runs before the access.
+6. **RPC + state ordering**: If a function builds state then calls an RPC with `call_local`, the local RPC fires synchronously and may clobber the state. Verify this can't happen. Preferred pattern: server sets its own state directly, then uses RPC (without `call_local`) to sync clients only.
+7. **Game flow trace**: Mentally walk through the full game path for the current state of the project:
+   - menu → lobby (auto-start 5s) → start_game() → advance_round() → minigame scene loads → play until completion/timeout → score submit → scoreboard (auto-advance 5s) → next round or end game (auto-return 10s)
+   - At each step, confirm no variable is empty/null/uninitialized when accessed
+   - Confirm every `change_scene_to_file()` path points to an existing .tscn file
+   - Verify that `mark_completed()` and `force_end_game()` paths correctly submit scores and transition
+8. **Integration test**: Run `bash tests/run_integration.sh` to verify the full multiplayer flow end-to-end with simulated inputs.
+
+If ANY check fails, fix the issue before marking the task done.
+
+**CRITICAL**: Read CLAUDE.md "Known Pitfalls" section before writing any code. These are bugs that have already happened and MUST be avoided.
 
 ### How to Checkpoint Progress
 After each completed task, append to `PROGRESS.md`:

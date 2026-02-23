@@ -12,6 +12,8 @@ extends MiniGameBase
 @onready var target_area: Control = %TargetArea
 @onready var target_button: Button = %TargetButton
 
+const COMPLETION_TARGET: int = 15
+
 var _score: int = 0
 
 const TARGET_SIZE: Vector2 = Vector2(60, 60)
@@ -48,6 +50,10 @@ func _on_target_clicked() -> void:
 		return
 	_score += 1
 	_update_score_display()
+	if _score >= COMPLETION_TARGET:
+		target_button.visible = false
+		mark_completed(_score)
+		return
 	_spawn_target()
 
 

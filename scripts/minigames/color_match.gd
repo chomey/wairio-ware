@@ -14,6 +14,8 @@ extends MiniGameBase
 @onready var match_button: Button = %MatchButton
 @onready var no_match_button: Button = %NoMatchButton
 
+const COMPLETION_TARGET: int = 12
+
 var _score: int = 0
 var _current_is_match: bool = false
 
@@ -71,6 +73,9 @@ func _on_match_pressed() -> void:
 	if _current_is_match:
 		_score += 1
 	_update_score_display()
+	if _score >= COMPLETION_TARGET:
+		mark_completed(_score)
+		return
 	_show_next_prompt()
 
 
@@ -80,6 +85,9 @@ func _on_no_match_pressed() -> void:
 	if not _current_is_match:
 		_score += 1
 	_update_score_display()
+	if _score >= COMPLETION_TARGET:
+		mark_completed(_score)
+		return
 	_show_next_prompt()
 
 

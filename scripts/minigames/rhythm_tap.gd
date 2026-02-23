@@ -26,9 +26,12 @@ const PERFECT_WINDOW: float = 0.08
 ## Time window for "Good" hit (seconds, +/-)
 const GOOD_WINDOW: float = 0.2
 
+const COMPLETION_TARGET: int = 12
+
 var _score: int = 0
 var _combo: int = 0
 var _best_combo: int = 0
+var _hits: int = 0
 
 ## Time since game started (used to schedule beats)
 var _elapsed: float = 0.0
@@ -122,11 +125,13 @@ func _handle_tap() -> void:
 	if closest_diff <= PERFECT_WINDOW:
 		_score += 3
 		_combo += 1
+		_hits += 1
 		_show_result("PERFECT!", Color.GOLD)
 		_remove_beat(closest_index)
 	elif closest_diff <= GOOD_WINDOW:
 		_score += 1
 		_combo += 1
+		_hits += 1
 		_show_result("GOOD", Color.GREEN)
 		_remove_beat(closest_index)
 	else:
@@ -137,6 +142,8 @@ func _handle_tap() -> void:
 		_best_combo = _combo
 	_update_score_display()
 	_update_combo_display()
+	if _hits >= COMPLETION_TARGET:
+		mark_completed(_score)
 
 
 func _spawn_beat(beat_time: float) -> void:
@@ -175,6 +182,7 @@ func _on_game_start() -> void:
 	_score = 0
 	_combo = 0
 	_best_combo = 0
+	_hits = 0
 	_elapsed = 0.0
 	_next_beat_index = 0
 	_active_beats.clear()

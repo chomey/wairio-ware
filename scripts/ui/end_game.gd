@@ -1,11 +1,16 @@
 extends Control
 
 ## EndGame UI controller
-## Shows final standings, winner display, and return to menu button.
+## Shows final standings, winner display, and auto-returns to menu.
 
 @onready var winner_label: Label = $CenterContainer/WinnerLabel
 @onready var standings_list: VBoxContainer = $CenterContainer/StandingsList
 @onready var menu_button: Button = $CenterContainer/MenuButton
+
+const AUTO_RETURN_DELAY: float = 10.0
+
+var _countdown_remaining: float = AUTO_RETURN_DELAY
+var _returned: bool = false
 
 
 func _ready() -> void:
@@ -14,7 +19,21 @@ func _ready() -> void:
 	_populate_standings()
 
 
+func _process(delta: float) -> void:
+	if _returned:
+		return
+
+	_countdown_remaining -= delta
+	menu_button.text = "Return to Menu (" + str(ceili(_countdown_remaining)) + ")"
+	if _countdown_remaining <= 0.0:
+		_returned = true
+		GameManager.return_to_menu()
+
+
 func _on_menu_pressed() -> void:
+	if _returned:
+		return
+	_returned = true
 	GameManager.return_to_menu()
 
 

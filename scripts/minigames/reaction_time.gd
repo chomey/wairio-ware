@@ -78,6 +78,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					_start_new_attempt_delayed()
 				else:
 					instruction_label.text = "Done! Best: " + str(_best_time_ms) + " ms"
+					mark_completed(maxi(0, 10000 - _best_time_ms))
 
 
 func _on_game_start() -> void:

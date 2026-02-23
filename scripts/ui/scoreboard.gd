@@ -1,30 +1,31 @@
 extends Control
 
 ## Scoreboard UI controller
-## Shows round scores, cumulative scores, and host-only continue button.
+## Shows round scores, cumulative scores, auto-advances after countdown.
 
 @onready var title_label: Label = $CenterContainer/TitleLabel
 @onready var round_label: Label = $CenterContainer/RoundLabel
 @onready var score_list: VBoxContainer = $CenterContainer/ScoreList
-@onready var continue_button: Button = $CenterContainer/ContinueButton
+
+const AUTO_ADVANCE_DELAY: float = 5.0
+
+var _countdown_remaining: float = AUTO_ADVANCE_DELAY
 
 
 func _ready() -> void:
-	continue_button.pressed.connect(_on_continue_pressed)
-
-	# Only the host can continue to next round
-	continue_button.visible = NetworkManager.is_host()
-
 	round_label.text = "Round " + str(GameManager.current_round) + " / " + str(GameManager.total_rounds)
-
 	_populate_scores()
 
 
-func _on_continue_pressed() -> void:
+func _process(delta: float) -> void:
 	if not NetworkManager.is_host():
 		return
 
-	GameManager.advance_round()
+	_countdown_remaining -= delta
+	round_label.text = "Round " + str(GameManager.current_round) + " / " + str(GameManager.total_rounds) + "  (Next in " + str(ceili(_countdown_remaining)) + ")"
+	if _countdown_remaining <= 0.0:
+		_countdown_remaining = 999.0  # Prevent re-triggering
+		GameManager.advance_round()
 
 
 func _populate_scores() -> void:

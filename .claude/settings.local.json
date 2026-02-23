@@ -1,18 +1,26 @@
 {
   "permissions": {
+    "allow": [
+      "Edit",
+      "Write"
+    ],
     "deny": [
       "Bash(sudo *)",
       "Bash(docker *)",
       "Read(./.env)",
       "Read(~/.ssh/**)",
       "Read(~/.aws/**)"
-    ],
-    "defaultMode": "bypassPermissions"
+    ]
   },
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
     "allowUnsandboxedCommands": false,
+    "writePaths": [
+      "~/Library/Application Support/Godot",
+      ".",
+      "/private/tmp/claude-501/"
+    ],
     "network": {
       "allowLocalBinding": true
     }

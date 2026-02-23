@@ -29,6 +29,9 @@ var _game_time_remaining: float = GAME_DURATION
 ## Whether this player has already submitted a score
 var _score_submitted: bool = false
 
+## Whether this player has completed the minigame (hit target or eliminated)
+var _player_completed: bool = false
+
 ## Timer nodes
 var _countdown_timer: Timer = null
 var _game_timer: Timer = null
@@ -60,6 +63,7 @@ func start_countdown() -> void:
 	_countdown_remaining = COUNTDOWN_DURATION
 	game_active = false
 	_score_submitted = false
+	_player_completed = false
 	countdown_tick.emit(_countdown_remaining)
 	_countdown_timer.start()
 
@@ -113,6 +117,28 @@ func _on_game_end() -> void:
 	pass
 
 
+## Mark this player as having completed the minigame.
+## Subclasses call this when their completion condition is met.
+## Sets _player_completed = true and submits the score.
+func mark_completed(raw_score: int) -> void:
+	if _player_completed:
+		return
+	_player_completed = true
+	game_active = false
+	_game_timer.stop()
+	submit_score(raw_score)
+
+
+## Force end the game for all peers. Called by server when N-1 players have submitted.
+@rpc("authority", "call_local", "reliable")
+func force_end_game() -> void:
+	if _player_completed:
+		return
+	_game_timer.stop()
+	game_active = false
+	_end_game()
+
+
 ## Submit this player's score to the server via GameManager.
 ## Each player submits their own score; the server collects them.
 func submit_score(raw_score: int) -> void:
@@ -121,7 +147,11 @@ func submit_score(raw_score: int) -> void:
 	_score_submitted = true
 
 	var my_id: int = multiplayer.get_unique_id()
-	_submit_score_to_server.rpc_id(1, my_id, raw_score)
+	if multiplayer.is_server():
+		# Host can't RPC to itself; call directly
+		GameManager.submit_player_score(my_id, raw_score)
+	else:
+		_submit_score_to_server.rpc_id(1, my_id, raw_score)
 
 
 @rpc("any_peer", "reliable")

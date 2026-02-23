@@ -10,6 +10,8 @@ extends MiniGameBase
 @onready var press_count_label: Label = %PressCountLabel
 @onready var instruction_label: Label = %InstructionLabel
 
+const COMPLETION_TARGET: int = 30
+
 var _press_count: int = 0
 
 
@@ -31,6 +33,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		if key_event.pressed and not key_event.echo and key_event.keycode == KEY_SPACE:
 			_press_count += 1
 			_update_press_display()
+			if _press_count >= COMPLETION_TARGET:
+				mark_completed(_press_count)
 
 
 func _on_game_start() -> void:

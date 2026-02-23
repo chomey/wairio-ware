@@ -179,3 +179,8 @@
 - Files created/modified: `scripts/minigames/color_mixer.gd`, `scenes/minigames/color_mixer.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Color Mixer minigame extending MiniGameBase. A target color is shown as a ColorRect. Player clicks R+/R-/G+/G-/B+/B- buttons (step=32) to adjust their color, then clicks SUBMIT. Colors match if each channel is within tolerance (16). Target values are multiples of 32 (0-224) for achievability. Race to 6 colors matched. Score = number of colors matched. Registered "Color Mixer" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 37: Maze Solver minigame - DONE
+- Files created/modified: `scripts/minigames/maze_solver.gd`, `scenes/minigames/maze_solver.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Maze Solver minigame extending MiniGameBase. An 11x11 grid maze is generated using recursive backtracker algorithm (guarantees solvability). Player (green) navigates with arrow keys from top-left to exit (red) at bottom-right. Each solved maze generates a new one. Race to 3 mazes solved. Score = number of mazes solved. Registered "Maze Solver" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

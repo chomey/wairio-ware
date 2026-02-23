@@ -45,7 +45,7 @@
 - [DONE] Task 34: Shopping Cart minigame - Race: item+price shown, type running total (keyboard, 8 items totaled)
 - [DONE] Task 35: Binary Convert minigame - Race: decimal number shown, type binary representation (keyboard, 8 conversions)
 - [DONE] Task 36: Color Mixer minigame - Race: target color shown, click R/G/B buttons to match it (mouse click, 6 colors matched)
-- [ ] Task 37: Maze Solver minigame - Race: navigate a small grid maze with arrow keys (arrow keys, reach the exit)
+- [DONE] Task 37: Maze Solver minigame - Race: navigate a small grid maze with arrow keys (arrow keys, reach the exit)
 - [ ] Task 38: Path Tracer minigame - Race: numbered waypoints appear, click them in order (mouse click, 3 paths traced)
 - [ ] Task 39: Equation Builder minigame - Race: given a target number and operators, type the equation (keyboard, 5 equations)
 

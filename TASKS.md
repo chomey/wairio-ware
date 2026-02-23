@@ -19,7 +19,7 @@
 ### Phase 4: More Mini-Games (one per task)
 - [DONE] Task 11: Reaction Time minigame
 - [DONE] Task 12: Quick Math minigame
-- [ ] Task 13: Target Click minigame
+- [DONE] Task 13: Target Click minigame
 - [ ] Task 14: Color Match minigame
 - [ ] Task 15: Memory Sequence minigame
 - [ ] Task 16: Dodge Falling minigame

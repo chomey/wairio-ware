@@ -59,3 +59,8 @@
 - Files created/modified: `scripts/minigames/quick_math.gd`, `scenes/minigames/quick_math.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Quick Math minigame extending MiniGameBase. Players solve randomly generated arithmetic problems (addition, subtraction, multiplication) within 10 seconds. Score = number of correct answers. Uses LineEdit for text input with Enter to submit. Registered "Quick Math" in GameManager.MINIGAME_REGISTRY.
 - Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.
+
+## Task 13: Target Click minigame - DONE
+- Files created/modified: `scripts/minigames/target_click.gd`, `scenes/minigames/target_click.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Target Click minigame extending MiniGameBase. Players click on a target button ("X") that appears at random positions within a target area. Each click scores a point and spawns the target at a new random position. Score = number of targets clicked within 10 seconds. Registered "Target Click" in GameManager.MINIGAME_REGISTRY.
+- Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.

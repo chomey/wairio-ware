@@ -479,3 +479,8 @@
 - Files created/modified: `scripts/minigames/firewalk.gd`, `scenes/minigames/firewalk.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Firewalk survival minigame extending MiniGameBase. An 8x6 grid of floor tiles where tiles randomly ignite (warning phase with pulsing yellow, then fire phase with red/orange flames). Player moves between tiles with arrow keys (grid-based with smooth interpolation). Standing on a burning tile eliminates the player. Fire spawn rate and count increase over time (1-3 tiles per wave). Warning gives 1.2s to react, fire lasts 2.5s. Score = survival time in tenths of seconds. Registered "Firewalk" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Firewalk"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 97: Rocket Launch minigame - DONE
+- Files created/modified: `scripts/minigames/rocket_launch.gd`, `scenes/minigames/rocket_launch.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Rocket Launch race minigame extending MiniGameBase. Player holds spacebar to charge a power meter that fills continuously. Release in the green zone (40-60%) for a good launch — closer to center (50%) is better. Overcharging to 100% auto-releases. Best of 5 attempts. Score = 10000 - (best_error * 10000), higher is better. Visual meter with red/green zones and charge indicator. Attempt markers color-code results. Registered "Rocket Launch" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Rocket Launch"` passed with both host and client reaching EndGame with positive scores.

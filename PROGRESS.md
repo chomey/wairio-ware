@@ -449,3 +449,8 @@
 - Files created/modified: `scripts/minigames/platform_jump.gd`, `scenes/minigames/platform_jump.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Platform Jump survival minigame extending MiniGameBase. Platforms scroll from right to left with increasing speed. Player uses LEFT/RIGHT to move and SPACE to jump. Gravity pulls player down. Landing on platforms keeps you alive. Falling off the bottom eliminates you. Platforms have random width and height variance. Score = survival time in tenths of seconds. Registered "Platform Jump" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Platform Jump"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 91: Decoy Detect minigame - DONE
+- Files created/modified: `scripts/minigames/decoy_detect.gd`, `scenes/minigames/decoy_detect.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Decoy Detect race minigame extending MiniGameBase. 12 dots move around a play area — all move in the same direction/speed except one decoy that moves faster and in a different direction. Player clicks the odd one out. Dots bounce off walls. Correct click spawns a new round, wrong click shows error feedback. Race to 10 spotted. Score = number of decoys spotted. Registered "Decoy Detect" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Decoy Detect"` passed with both host and client reaching EndGame with positive scores.

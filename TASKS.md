@@ -106,7 +106,7 @@
 - [DONE] Task 88: Snake Grow minigame - Survival: classic snake movement, eat dots to grow, don't hit walls or yourself (arrow keys, crash = eliminated)
 - [DONE] Task 89: Tornado Dodge minigame - Survival: tornadoes wander the arena, move to avoid them (arrow keys, touched = eliminated)
 - [DONE] Task 90: Platform Jump minigame - Survival: platforms scroll left, jump between them, fall off screen = eliminated (arrow+space, fall = eliminated)
-- [ ] Task 91: Decoy Detect minigame - Race: group of moving dots, click the one that moves differently (mouse click, 10 spotted)
+- [DONE] Task 91: Decoy Detect minigame - Race: group of moving dots, click the one that moves differently (mouse click, 10 spotted)
 - [ ] Task 92: Sinking Ship minigame - Survival: ship fills with water, plug leaks by clicking them, ship sinks = eliminated (mouse click, ship sinks = eliminated)
 - [ ] Task 93: Flag Raise minigame - Race: tap spacebar with correct rhythm to raise flag smoothly, off-rhythm resets (spacebar, flag reaches top)
 - [ ] Task 94: Bumper Cars minigame - Survival: move in arena, AI bumper cars roam, knocked out of bounds = eliminated (arrow keys, out of bounds = eliminated)

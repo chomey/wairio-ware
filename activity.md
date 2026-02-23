@@ -5,8 +5,8 @@ This file logs what the agent accomplishes during each iteration:
 
 ## Current Status
 **Last Updated:** 2026-02-22
-**Tasks Completed:** 3
-**Current Task:** Task 3 - First game (spacebar timing)
+**Tasks Completed:** 4
+**Current Task:** Task 4 - End game
 
 ---
 
@@ -49,3 +49,14 @@ This file logs what the agent accomplishes during each iteration:
 - **Result:** PASS — Spacebar timing mini game with networked scoring, results display, and lobby return
 - **Screenshot:** N/A (headless validation, no GUI screenshot)
 
+### 2026-02-22 — Task 4: End Game
+- **Started:** Working on Task 4 - End game: sum scores, present winner, return to lobby
+- **Changes:**
+  - Created `end_game.gd` with full results display: sorted scoreboard, winner detection with tie handling, gold-colored winner text
+  - Created `end_game.tscn` scene with Game Over title, winner label, ranked scoreboard, and Return to Lobby button (host-only)
+  - Modified `timer_game.gd` to navigate to end game scene instead of waiting room after round results
+  - End game resets scores and returns all players to waiting room via RPC when host clicks return
+  - Added `_test_feature()` covering: winner detection, tie handling, scoreboard ranking
+  - Validated project loads in Godot 4.6.1 headless mode with no GDScript errors
+- **Result:** PASS — End game screen with summed scores, winner presentation, and lobby return
+- **Screenshot:** N/A (headless validation, no GUI screenshot)

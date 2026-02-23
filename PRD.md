@@ -45,11 +45,11 @@ Highest scoring players get the most points, for each game, summed at the end.
   },
 {
     "category": "feature",
-    "description": “End game”,
-    "steps": [
+    “description”: “End game”,
+    “steps”: [
       “Sum game, present who won, put players back to lobby”
     ],
-    "passes": false
+    “passes”: true
   },
   {
     "category": "testing",

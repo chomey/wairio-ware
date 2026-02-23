@@ -117,15 +117,15 @@ func _show_results(score_data: Dictionary, t_time: float) -> void:
 
 	result_label.text = text
 
-	# After 4 seconds, go back to waiting room
+	# After 4 seconds, go to end game screen
 	await get_tree().create_timer(4.0).timeout
 	if multiplayer.is_server():
-		_return_to_lobby.rpc()
+		_go_to_end_game.rpc()
 
 
 @rpc("authority", "call_local", "reliable")
-func _return_to_lobby() -> void:
-	get_tree().change_scene_to_file("res://scenes/waiting_room.tscn")
+func _go_to_end_game() -> void:
+	get_tree().change_scene_to_file("res://scenes/end_game.tscn")
 
 
 func _test_feature() -> void:

@@ -359,3 +359,8 @@
 - Files created/modified: `scripts/minigames/block_breaker.gd`, `scenes/minigames/block_breaker.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Block Breaker race minigame extending MiniGameBase. Classic breakout gameplay: paddle moves with arrow keys, ball bounces to break colored blocks (4 rows x 8 cols). Ball reflects off walls, paddle, and blocks. Ball angle varies based on paddle hit position. Blocks respawn if all cleared before target. Ball resets if it falls below paddle. Race to 20 blocks broken. Score = blocks broken. Registered "Block Breaker" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Block Breaker"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 73: Tug of War minigame - DONE
+- Files created/modified: `scripts/minigames/tug_of_war.gd`, `scenes/minigames/tug_of_war.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Tug of War race minigame extending MiniGameBase. A rope marker starts at center and drifts toward the opponent side. Player mashes spacebar to pull it toward their side. Drift accelerates over time. Marker color shifts green/yellow/red based on position. Race to pull marker to your end (position >= 1.0). Score = total presses. Registered "Tug of War" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Tug of War"` passed with both host and client reaching EndGame with positive scores.

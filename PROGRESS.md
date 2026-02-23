@@ -19,3 +19,8 @@
 - Files created/modified: `project.godot`, `scenes/main_menu.tscn`, `scripts/ui/main_menu.gd`, deleted `scenes/default.tscn`
 - What was done: Added [autoload] section to project.godot registering NetworkManager and GameManager singletons. Changed main scene from default.tscn to main_menu.tscn. Created placeholder main_menu scene+script. Deleted unused default.tscn.
 - Verification: Manual code review passed. Autoload paths point to existing files. Main scene path points to existing .tscn. Scene resource reference matches script path.
+
+## Task 5: MainMenu scene+script - DONE
+- Files created/modified: `scenes/main_menu.tscn`, `scripts/ui/main_menu.gd`
+- What was done: Built full MainMenu UI with VBoxContainer layout containing title, player name input, IP address input (default 127.0.0.1), Host Game and Join Game buttons, and a status label for connection feedback. Script handles validation, calls NetworkManager.host_game/join_game, disables buttons during connection, shows errors, and transitions to lobby on success.
+- Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Signal connections match NetworkManager API.

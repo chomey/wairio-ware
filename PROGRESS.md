@@ -9,3 +9,8 @@
 - Files created/modified: `scripts/autoloads/game_manager.gd`
 - What was done: Created GameManager singleton with score tracking (cumulative + per-round), round progression, minigame registry (name -> scene path), shuffled minigame ordering, server-authoritative ranking with tie support (1st=N pts, 2nd=N-1, ties share higher value), scene transitions via RPCs, and signals for round/game lifecycle events.
 - Verification: Manual code review passed. All GDScript syntax, strong typing, RPC annotations, and signal declarations verified correct.
+
+## Task 3: MiniGameBase class - DONE
+- Files created/modified: `scripts/mini_game_base.gd`
+- What was done: Created MiniGameBase class (class_name MiniGameBase, extends Node) with 3-second countdown timer, 10-second game timer, virtual `_on_game_start()`/`_on_game_end()` hooks for subclasses, `submit_score()` that RPCs to server which delegates to GameManager, and signals for countdown/timer ticks.
+- Verification: Manual code review passed. All GDScript syntax, strong typing, RPC annotations, signal declarations, and timer setup verified correct.

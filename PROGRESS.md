@@ -99,3 +99,8 @@
 - Files created/modified: `scripts/minigames/copy_cat.gd`, `scenes/minigames/copy_cat.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Copy Cat minigame extending MiniGameBase. A sequence of arrows is shown one at a time (flash + pause), then the player reproduces it by pressing arrow keys in the correct order. Starts with length 2, grows by 1 each successful sequence. Wrong press resets input for that sequence. Race to 5 completed sequences. Score = number of sequences completed. Registered "Copy Cat" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 21: Direction Dash minigame - DONE
+- Files created/modified: `scripts/minigames/direction_dash.gd`, `scenes/minigames/direction_dash.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Direction Dash minigame extending MiniGameBase. A direction word (UP, DOWN, LEFT, RIGHT) is displayed as text and the player presses the matching arrow key. Correct presses advance to the next word, wrong presses show the correct direction. Race to 15 correct. Score = number of correct presses. Registered "Direction Dash" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

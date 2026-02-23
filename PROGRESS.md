@@ -439,3 +439,8 @@
 - Files created/modified: `scripts/minigames/snake_grow.gd`, `scenes/minigames/snake_grow.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Snake Grow survival minigame extending MiniGameBase. Classic snake on a 20x15 grid. Arrow keys change direction. Eat dots to grow. Hitting walls or your own body eliminates you. Movement speed increases over time. Snake has color gradient from head to tail. Score = survival time in tenths of seconds. Registered "Snake Grow" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Snake Grow"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 89: Tornado Dodge minigame - DONE
+- Files created/modified: `scripts/minigames/tornado_dodge.gd`, `scenes/minigames/tornado_dodge.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Tornado Dodge survival minigame extending MiniGameBase. Tornadoes wander the arena with semi-random movement, bouncing off walls. More spawn over time (up to 12). Player moves with all four arrow keys. Tornado speed increases over time. Spinning visual effect for tornadoes. Touching a tornado eliminates the player. Score = survival time in tenths of seconds. Registered "Tornado Dodge" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Tornado Dodge"` passed with both host and client reaching EndGame with positive scores.

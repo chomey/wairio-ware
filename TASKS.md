@@ -41,7 +41,7 @@
 - [DONE] Task 30: Morse Decode minigame - Race: short/long beep patterns shown, type the letter (keyboard, 10 letters)
 - [DONE] Task 31: Pixel Painter minigame - Race: fill in marked cells in a grid by clicking them (mouse click, fill 20 cells)
 - [DONE] Task 32: Rapid Toggle minigame - Race: grid of dark squares, click to light them all up (mouse click, all 16 lit)
-- [ ] Task 33: Chain Reaction minigame - Race: click to place circles that expand and trigger others (mouse click, clear 30 targets)
+- [DONE] Task 33: Chain Reaction minigame - Race: click to place circles that expand and trigger others (mouse click, clear 30 targets)
 - [ ] Task 34: Shopping Cart minigame - Race: item+price shown, type running total (keyboard, 8 items totaled)
 - [ ] Task 35: Binary Convert minigame - Race: decimal number shown, type binary representation (keyboard, 8 conversions)
 - [ ] Task 36: Color Mixer minigame - Race: target color shown, click R/G/B buttons to match it (mouse click, 6 colors matched)

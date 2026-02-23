@@ -58,6 +58,7 @@ func _ready() -> void:
 	register_minigame("Morse Decode", "res://scenes/minigames/morse_decode.tscn")
 	register_minigame("Pixel Painter", "res://scenes/minigames/pixel_painter.tscn")
 	register_minigame("Rapid Toggle", "res://scenes/minigames/rapid_toggle.tscn")
+	register_minigame("Chain Reaction", "res://scenes/minigames/chain_reaction.tscn")
 
 
 ## Start a new game session. Called by host only.

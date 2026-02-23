@@ -104,3 +104,8 @@
 - Files created/modified: `scripts/minigames/direction_dash.gd`, `scenes/minigames/direction_dash.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Direction Dash minigame extending MiniGameBase. A direction word (UP, DOWN, LEFT, RIGHT) is displayed as text and the player presses the matching arrow key. Correct presses advance to the next word, wrong presses show the correct direction. Race to 15 correct. Score = number of correct presses. Registered "Direction Dash" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 22: Odd One Out minigame - DONE
+- Files created/modified: `scripts/minigames/odd_one_out.gd`, `scenes/minigames/odd_one_out.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Odd One Out minigame extending MiniGameBase. A 4x4 grid of colored buttons is displayed where all but one share the same color. Player clicks the differently-colored button to score. Each correct click generates a new round with random colors from a 7-color pool. Race to 10 correct clicks. Score = number of correct clicks. Registered "Odd One Out" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

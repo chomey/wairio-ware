@@ -434,3 +434,8 @@
 - Files created/modified: `scripts/minigames/pinball_bounce.gd`, `scenes/minigames/pinball_bounce.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Pinball Bounce survival minigame extending MiniGameBase. Ball bounces around the play area, player moves a paddle at the bottom with LEFT/RIGHT arrow keys. Ball speed increases and paddle shrinks over time. Ball angle varies based on where it hits the paddle. Missing the ball eliminates the player. Score = survival time in tenths of seconds. Registered "Pinball Bounce" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Pinball Bounce"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 88: Snake Grow minigame - DONE
+- Files created/modified: `scripts/minigames/snake_grow.gd`, `scenes/minigames/snake_grow.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Snake Grow survival minigame extending MiniGameBase. Classic snake on a 20x15 grid. Arrow keys change direction. Eat dots to grow. Hitting walls or your own body eliminates you. Movement speed increases over time. Snake has color gradient from head to tail. Score = survival time in tenths of seconds. Registered "Snake Grow" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Snake Grow"` passed with both host and client reaching EndGame with positive scores.

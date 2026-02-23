@@ -164,3 +164,8 @@
 - Files created/modified: `scripts/minigames/chain_reaction.gd`, `scenes/minigames/chain_reaction.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Chain Reaction minigame extending MiniGameBase. 12 red target circles are scattered in a play area. Player clicks to place an expanding circle; when it touches a target, that target triggers its own expanding circle, creating chain reactions. Each wave spawns new targets. Race to clear 30 targets. Score = targets cleared. Uses Control.draw signal for custom circle rendering. Registered "Chain Reaction" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 34: Shopping Cart minigame - DONE
+- Files created/modified: `scripts/minigames/shopping_cart.gd`, `scenes/minigames/shopping_cart.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Shopping Cart minigame extending MiniGameBase. Items with random prices ($0.50-$9.99) are shown one at a time. Player types the running total and presses Enter. Correct answers advance to next item, wrong answers reset the cart to $0. Accepts optional $ prefix. Race to 8 correct totals. Score = number of correct totals. Registered "Shopping Cart" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

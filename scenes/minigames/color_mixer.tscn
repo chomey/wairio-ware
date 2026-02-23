@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/minigames/color_mixer.gd" id="1_script"]
+
+[node name="ColorMixer" type="Node"]
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.12, 0.18, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "COLOR MIXER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer1" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="CountdownLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Time: 10.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="ColorRow" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TargetColumn" type="VBoxContainer" parent="VBoxContainer/ColorRow"]
+layout_mode = 2
+
+[node name="TargetLabel" type="Label" parent="VBoxContainer/ColorRow/TargetColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "TARGET"
+horizontal_alignment = 1
+
+[node name="TargetColorRect" type="ColorRect" parent="VBoxContainer/ColorRow/TargetColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(120, 80)
+color = Color(1, 0, 0, 1)
+
+[node name="Spacer" type="Control" parent="VBoxContainer/ColorRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+
+[node name="PlayerColumn" type="VBoxContainer" parent="VBoxContainer/ColorRow"]
+layout_mode = 2
+
+[node name="YoursLabel" type="Label" parent="VBoxContainer/ColorRow/PlayerColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "YOURS"
+horizontal_alignment = 1
+
+[node name="PlayerColorRect" type="ColorRect" parent="VBoxContainer/ColorRow/PlayerColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(120, 80)
+color = Color(0.5, 0.5, 0.5, 1)
+
+[node name="Spacer3" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="RGBLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+
+[node name="Spacer4" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 5)
+
+[node name="ButtonRow" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RDownButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "R-"
+
+[node name="RUpButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "R+"
+
+[node name="Spacer1" type="Control" parent="VBoxContainer/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(10, 0)
+
+[node name="GDownButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "G-"
+
+[node name="GUpButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "G+"
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/ButtonRow"]
+layout_mode = 2
+custom_minimum_size = Vector2(10, 0)
+
+[node name="BDownButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "B-"
+
+[node name="BUpButton" type="Button" parent="VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "B+"
+
+[node name="Spacer5" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 5)
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SUBMIT"
+
+[node name="Spacer6" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="FeedbackLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer7" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Matched: 0 / 6"
+horizontal_alignment = 1
+vertical_alignment = 1

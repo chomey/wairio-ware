@@ -174,3 +174,8 @@
 - Files created/modified: `scripts/minigames/binary_convert.gd`, `scenes/minigames/binary_convert.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Binary Convert minigame extending MiniGameBase. A random decimal number (1-31) is shown and the player types its binary representation. Correct answers advance to the next number, wrong answers show the correct binary. Leading zeros are stripped for comparison. Race to 8 correct conversions. Score = number of correct conversions. Registered "Binary Convert" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 36: Color Mixer minigame - DONE
+- Files created/modified: `scripts/minigames/color_mixer.gd`, `scenes/minigames/color_mixer.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Color Mixer minigame extending MiniGameBase. A target color is shown as a ColorRect. Player clicks R+/R-/G+/G-/B+/B- buttons (step=32) to adjust their color, then clicks SUBMIT. Colors match if each channel is within tolerance (16). Target values are multiples of 32 (0-224) for achievability. Race to 6 colors matched. Score = number of colors matched. Registered "Color Mixer" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

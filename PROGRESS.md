@@ -269,3 +269,8 @@
 - Files created/modified: `scripts/minigames/treasure_dig.gd`, `scenes/minigames/treasure_dig.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Treasure Dig race minigame extending MiniGameBase. Player mashes spacebar to dig through layers of dirt. Each layer requires increasing presses (base 5, +2 per layer). Visual depth bar fills from bottom to top with color shifting from brown to gold. Race to reach depth 10. Registered "Treasure Dig" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Treasure Dig"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 55: Light Switch minigame - DONE
+- Files created/modified: `scripts/minigames/light_switch.gd`, `scenes/minigames/light_switch.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Light Switch race minigame extending MiniGameBase. Two 4x4 grids side by side: target pattern (5-10 random lit cells) and player grid (all off). Player clicks cells to toggle individual lights to match the target. Race to solve 5 puzzles. Score = puzzles solved. Registered "Light Switch" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Light Switch"` passed with both host and client reaching EndGame with positive scores.

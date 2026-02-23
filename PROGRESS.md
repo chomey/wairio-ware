@@ -314,3 +314,8 @@
 - Files created/modified: `scripts/minigames/falling_letters.gd`, `scenes/minigames/falling_letters.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Falling Letters race minigame extending MiniGameBase. Letters rain down from the top of a play area, getting faster over time. Player types the matching letter key to catch them before they hit the bottom. Targets the lowest matching letter first. Letters shift from white to red as they approach the bottom. Spawn rate and fall speed increase with progress. Race to 25 typed. Score = letters typed. Registered "Falling Letters" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Falling Letters"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 64: Color Flood minigame - DONE
+- Files created/modified: `scripts/minigames/color_flood.gd`, `scenes/minigames/color_flood.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Color Flood race minigame extending MiniGameBase. An 8x8 grid of randomly colored cells (5 colors). Player clicks color buttons to flood-fill from the top-left corner, expanding all connected same-color cells to the chosen color. Goal is to make the entire grid one color. BFS flood fill algorithm. Race to clear 5 boards. Score = boards cleared. Registered "Color Flood" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Color Flood"` passed with both host and client reaching EndGame with positive scores.

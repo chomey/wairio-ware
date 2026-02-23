@@ -12,17 +12,27 @@ HOST_GODOT_LOG="$PROJECT_DIR/test_host_godot.log"
 CLIENT_GODOT_LOG="$PROJECT_DIR/test_client_godot.log"
 TIMEOUT=120
 
+# Build --test-games arg from positional parameters (game display names)
+TEST_GAMES_ARG=""
+if [ $# -gt 0 ]; then
+    GAMES=$(IFS=,; echo "$*")
+    TEST_GAMES_ARG="--test-games=$GAMES"
+fi
+
 # Clean up old logs
 rm -f "$HOST_LOG" "$CLIENT_LOG" "$HOST_GODOT_LOG" "$CLIENT_GODOT_LOG"
 
 echo "=== WarioParty Integration Test ==="
 echo "Project: $PROJECT_DIR"
 echo "Timeout: ${TIMEOUT}s"
+if [ -n "$TEST_GAMES_ARG" ]; then
+    echo "Games: $TEST_GAMES_ARG"
+fi
 echo ""
 
 # Launch host instance
 echo "Starting host..."
-"$GODOT" --headless --path "$PROJECT_DIR" --log-file "$HOST_GODOT_LOG" -- --test-host &
+"$GODOT" --headless --path "$PROJECT_DIR" --log-file "$HOST_GODOT_LOG" -- --test-host "$TEST_GAMES_ARG" &
 HOST_PID=$!
 echo "Host PID: $HOST_PID"
 
@@ -31,7 +41,7 @@ sleep 2
 
 # Launch client instance
 echo "Starting client..."
-"$GODOT" --headless --path "$PROJECT_DIR" --log-file "$CLIENT_GODOT_LOG" -- --test-client &
+"$GODOT" --headless --path "$PROJECT_DIR" --log-file "$CLIENT_GODOT_LOG" -- --test-client "$TEST_GAMES_ARG" &
 CLIENT_PID=$!
 echo "Client PID: $CLIENT_PID"
 

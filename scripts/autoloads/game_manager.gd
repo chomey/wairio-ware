@@ -33,6 +33,9 @@ var _minigame_order: Array[String] = []
 ## Whether a game session is active
 var _game_active: bool = false
 
+## Optional forced minigame list (display names). When non-empty, start_game() uses this instead of shuffling.
+var forced_minigames: Array[String] = []
+
 
 func _ready() -> void:
 	register_minigame("Button Masher", "res://scenes/minigames/button_masher.tscn")
@@ -76,6 +79,7 @@ func _ready() -> void:
 	register_minigame("Asteroid Dodge", "res://scenes/minigames/asteroid_dodge.tscn")
 	register_minigame("Conveyor Chaos", "res://scenes/minigames/conveyor_chaos.tscn")
 	register_minigame("Laser Dodge", "res://scenes/minigames/laser_dodge.tscn")
+	register_minigame("Simon Says", "res://scenes/minigames/simon_says.tscn")
 
 
 ## Start a new game session. Called by host only.
@@ -93,16 +97,21 @@ func start_game() -> void:
 	for peer_id: int in NetworkManager.players:
 		cumulative_scores[peer_id] = 0
 
-	# Build shuffled minigame order
+	# Build minigame order: use forced list if provided, otherwise shuffle
 	_minigame_order.clear()
-	var available: Array = MINIGAME_REGISTRY.keys()
-	available.shuffle()
-	# If we have fewer minigames than rounds, cycle through them
-	while _minigame_order.size() < total_rounds:
-		for name: String in available:
-			_minigame_order.append(name)
-			if _minigame_order.size() >= total_rounds:
-				break
+	if forced_minigames.size() > 0:
+		for mg_name: String in forced_minigames:
+			_minigame_order.append(mg_name)
+		total_rounds = _minigame_order.size()
+	else:
+		var available: Array = MINIGAME_REGISTRY.keys()
+		available.shuffle()
+		# If we have fewer minigames than rounds, cycle through them
+		while _minigame_order.size() < total_rounds:
+			for mg_name: String in available:
+				_minigame_order.append(mg_name)
+				if _minigame_order.size() >= total_rounds:
+					break
 
 	# Tell all clients to start and advance to first round
 	_sync_game_start.rpc(total_rounds, _minigame_order)
@@ -285,5 +294,6 @@ func return_to_menu() -> void:
 	round_raw_scores.clear()
 	round_points.clear()
 	_minigame_order.clear()
+	forced_minigames.clear()
 	NetworkManager.disconnect_game()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

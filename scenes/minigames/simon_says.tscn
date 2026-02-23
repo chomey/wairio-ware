@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/minigames/simon_says.gd" id="1_script"]
+
+[node name="SimonSays" type="Node"]
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.15, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SIMON SAYS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer1" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="CountdownLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Time: 10.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="PanelGrid" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="SpacerLeft" type="Control" parent="VBoxContainer/PanelGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+
+[node name="PanelUp" type="ColorRect" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 80)
+color = Color(0.2, 0.2, 0.5, 1)
+
+[node name="SpacerRight" type="Control" parent="VBoxContainer/PanelGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+
+[node name="PanelLeft" type="ColorRect" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 80)
+color = Color(0.5, 0.2, 0.2, 1)
+
+[node name="CenterSpacer" type="Control" parent="VBoxContainer/PanelGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 80)
+
+[node name="PanelRight" type="ColorRect" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 80)
+color = Color(0.5, 0.5, 0.2, 1)
+
+[node name="SpacerLeft2" type="Control" parent="VBoxContainer/PanelGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+
+[node name="PanelDown" type="ColorRect" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 80)
+color = Color(0.2, 0.5, 0.2, 1)
+
+[node name="SpacerRight2" type="Control" parent="VBoxContainer/PanelGrid"]
+layout_mode = 2
+custom_minimum_size = Vector2(150, 0)
+
+[node name="Spacer4" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="FeedbackLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer5" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Rounds: 0 / 10"
+horizontal_alignment = 1
+vertical_alignment = 1

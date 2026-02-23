@@ -249,3 +249,8 @@
 - Files created/modified: `scripts/minigames/laser_dodge.gd`, `scenes/minigames/laser_dodge.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Laser Dodge survival minigame extending MiniGameBase. Lasers sweep across the arena from all four directions (left-to-right, right-to-left, top-to-bottom, bottom-to-top), each with a gap the player must position through. Player moves with arrow keys. Laser spawn rate and speed increase over time. Lasers rendered via PlayArea _draw signal with glow effect. Hit by laser eliminates the player. Score = survival time in tenths of seconds. Registered "Laser Dodge" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 51: Simon Says minigame - DONE
+- Files created/modified: `scripts/minigames/simon_says.gd`, `scenes/minigames/simon_says.tscn`, `scripts/autoloads/game_manager.gd`, `tests/run_integration.sh`
+- What was done: Created Simon Says race minigame extending MiniGameBase. Four colored panels (blue=UP, green=DOWN, red=LEFT, yellow=RIGHT) flash in sequence; player repeats with arrow keys. Sequence grows each round (starting length 2). Race to complete 10 rounds. Wrong input resets the current sequence attempt. Also fixed shell quoting bug in run_integration.sh where game names with spaces were being split into separate args.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Simon Says"` passed with both host and client reaching EndGame with positive scores.

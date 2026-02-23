@@ -264,3 +264,8 @@
 - Files created/modified: `scripts/minigames/fruit_catcher.gd`, `scenes/minigames/fruit_catcher.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Fruit Catcher race minigame extending MiniGameBase. Player moves a basket left/right with arrow keys to catch falling green fruit while avoiding red bad items (-2 penalty). Fall speed increases over time. Race to 15 caught. Registered "Fruit Catcher" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (only harmless CA cert error). Integration test `bash tests/run_integration.sh "Fruit Catcher"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 54: Treasure Dig minigame - DONE
+- Files created/modified: `scripts/minigames/treasure_dig.gd`, `scenes/minigames/treasure_dig.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Treasure Dig race minigame extending MiniGameBase. Player mashes spacebar to dig through layers of dirt. Each layer requires increasing presses (base 5, +2 per layer). Visual depth bar fills from bottom to top with color shifting from brown to gold. Race to reach depth 10. Registered "Treasure Dig" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Treasure Dig"` passed with both host and client reaching EndGame with positive scores.

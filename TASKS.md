@@ -67,7 +67,7 @@
 - [DONE] Task 51: Simon Says minigame - Race: repeat growing sequence of arrow key inputs, first to complete 10 rounds wins (arrow keys, 10 sequences)
 - [DONE] Task 52: Whack-a-Mole minigame - Race: colored squares pop up randomly in a grid, click to whack (mouse click, 20 hits)
 - [DONE] Task 53: Fruit Catcher minigame - Race: move basket left/right to catch falling items, avoid bad items (arrow keys, 15 caught)
-- [ ] Task 54: Treasure Dig minigame - Race: mash keys to dig through layers of dirt (spacebar, reach depth 10)
+- [DONE] Task 54: Treasure Dig minigame - Race: mash keys to dig through layers of dirt (spacebar, reach depth 10)
 - [ ] Task 55: Light Switch minigame - Race: grid of lights, click to toggle, match the target pattern (mouse click, 5 puzzles solved)
 - [ ] Task 56: Ice Breaker minigame - Race: tap spacebar with correct timing to break ice blocks in sequence (spacebar, 12 blocks broken)
 - [ ] Task 57: Bubble Pop minigame - Race: bubbles float up with letters on them, type the letter to pop (keyboard, 20 popped)

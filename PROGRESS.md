@@ -469,3 +469,8 @@
 - Files created/modified: `scripts/minigames/bumper_cars.gd`, `scenes/minigames/bumper_cars.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Bumper Cars survival minigame extending MiniGameBase. Player moves in an arena with arrow keys while AI bumper cars roam randomly, bouncing off walls and changing direction periodically. Colliding with a car applies knockback force that can push the player out of bounds. More cars spawn over time (up to 10), speed increases, and knockback force grows. Cars have colorful hue-varied appearances. Player color shifts green-to-red near edges. Getting knocked out of bounds eliminates the player. Score = survival time in tenths of seconds. Registered "Bumper Cars" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Bumper Cars"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 95: Flip Memory minigame - DONE
+- Files created/modified: `scripts/minigames/flip_memory.gd`, `scenes/minigames/flip_memory.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Flip Memory race minigame extending MiniGameBase. A 5x4 grid (20 cards, 10 pairs) of face-down cards with colored numbers. Player clicks to flip two cards at a time. Matching pairs stay revealed, mismatches flip back after 0.6s. Race to find all 10 pairs. Score = pairs found. Registered "Flip Memory" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Flip Memory"` passed with both host and client reaching EndGame with positive scores.

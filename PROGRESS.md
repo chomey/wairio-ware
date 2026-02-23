@@ -364,3 +364,8 @@
 - Files created/modified: `scripts/minigames/tug_of_war.gd`, `scenes/minigames/tug_of_war.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Tug of War race minigame extending MiniGameBase. A rope marker starts at center and drifts toward the opponent side. Player mashes spacebar to pull it toward their side. Drift accelerates over time. Marker color shifts green/yellow/red based on position. Race to pull marker to your end (position >= 1.0). Score = total presses. Registered "Tug of War" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Tug of War"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 74: Anagram Solve minigame - DONE
+- Files created/modified: `scripts/minigames/anagram_solve.gd`, `scenes/minigames/anagram_solve.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Anagram Solve race minigame extending MiniGameBase. A scrambled word is shown from a 50-word list (6-7 letter words). Player types the correct unscrambled word and presses Enter. Shows letter count as hint. Correct answers advance, wrong answers reveal the word. Fisher-Yates shuffle ensures scrambled form differs from original. Race to 8 solved. Score = words solved. Registered "Anagram Solve" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Anagram Solve"` passed with both host and client reaching EndGame with positive scores.

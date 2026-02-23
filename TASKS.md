@@ -101,7 +101,7 @@
 - [DONE] Task 83: Gravity Well minigame - Survival: player orbits a center point, arrow keys adjust orbit, drift off screen = eliminated (arrow keys, off screen = eliminated)
 - [DONE] Task 84: Thermal Rise minigame - Survival: character floats upward through gaps in platforms, hit a platform = eliminated (arrow keys, hit platform = eliminated)
 - [DONE] Task 85: Rail Grind minigame - Survival: character on rails, press up/down to switch tracks to avoid obstacles (arrow keys, hit obstacle = eliminated)
-- [ ] Task 86: Wind Runner minigame - Survival: wind gusts push player, counter with arrow keys to stay in bounds (arrow keys, blown off = eliminated)
+- [DONE] Task 86: Wind Runner minigame - Survival: wind gusts push player, counter with arrow keys to stay in bounds (arrow keys, blown off = eliminated)
 - [ ] Task 87: Pinball Bounce minigame - Survival: ball bounces around, move paddle to keep it alive, miss = eliminated (arrow keys, miss ball = eliminated)
 - [ ] Task 88: Snake Grow minigame - Survival: classic snake movement, eat dots to grow, don't hit walls or yourself (arrow keys, crash = eliminated)
 - [ ] Task 89: Tornado Dodge minigame - Survival: tornadoes wander the arena, move to avoid them (arrow keys, touched = eliminated)

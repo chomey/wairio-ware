@@ -424,3 +424,8 @@
 - Files created/modified: `scripts/minigames/rail_grind.gd`, `scenes/minigames/rail_grind.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Rail Grind survival minigame extending MiniGameBase. Character rides on one of 3 horizontal rails. Obstacles scroll from right to left with increasing speed. Press UP/DOWN to switch tracks and dodge obstacles. Sometimes 2 tracks are blocked simultaneously (after 3s). Hitting an obstacle eliminates the player. Score = survival time in tenths of seconds. Registered "Rail Grind" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Rail Grind"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 86: Wind Runner minigame - DONE
+- Files created/modified: `scripts/minigames/wind_runner.gd`, `scenes/minigames/wind_runner.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Wind Runner survival minigame extending MiniGameBase. Wind gusts push the player in random directions with increasing strength. Use all four arrow keys to counter the wind and stay within the arena bounds. Occasional powerful gusts (2.5x multiplier) add danger. Wind particles show direction. Player color shifts green to red based on proximity to edges. Getting blown off the edge eliminates the player. Score = survival time in tenths of seconds. Registered "Wind Runner" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Wind Runner"` passed with both host and client reaching EndGame with positive scores.

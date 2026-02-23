@@ -384,3 +384,8 @@
 - Files created/modified: `scripts/minigames/greater_than.gd`, `scenes/minigames/greater_than.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Greater Than race minigame extending MiniGameBase. Two random numbers (1-99, always different) are displayed side by side. Player presses left or right arrow key to select the larger number. Correct presses advance to the next pair, wrong presses show which side was bigger. Race to 15 correct. Score = correct answers. Registered "Greater Than" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Greater Than"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 78: Shadow Match minigame - DONE
+- Files created/modified: `scripts/minigames/shadow_match.gd`, `scenes/minigames/shadow_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Shadow Match race minigame extending MiniGameBase. A dark silhouette of a shape (from 10 types: circle, square, triangle, diamond, star, cross, pentagon, hexagon, arrow, heart) is displayed at the top. Four colored shape options are shown below. Player clicks the matching shape. Shapes are drawn using custom _draw with parametric curves and polygon rendering. Race to 10 correct matches. Score = matches made. Registered "Shadow Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Shadow Match"` passed with both host and client reaching EndGame with positive scores.

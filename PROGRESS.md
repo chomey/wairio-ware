@@ -444,3 +444,8 @@
 - Files created/modified: `scripts/minigames/tornado_dodge.gd`, `scenes/minigames/tornado_dodge.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Tornado Dodge survival minigame extending MiniGameBase. Tornadoes wander the arena with semi-random movement, bouncing off walls. More spawn over time (up to 12). Player moves with all four arrow keys. Tornado speed increases over time. Spinning visual effect for tornadoes. Touching a tornado eliminates the player. Score = survival time in tenths of seconds. Registered "Tornado Dodge" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Tornado Dodge"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 90: Platform Jump minigame - DONE
+- Files created/modified: `scripts/minigames/platform_jump.gd`, `scenes/minigames/platform_jump.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Platform Jump survival minigame extending MiniGameBase. Platforms scroll from right to left with increasing speed. Player uses LEFT/RIGHT to move and SPACE to jump. Gravity pulls player down. Landing on platforms keeps you alive. Falling off the bottom eliminates you. Platforms have random width and height variance. Score = survival time in tenths of seconds. Registered "Platform Jump" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Platform Jump"` passed with both host and client reaching EndGame with positive scores.

@@ -1,0 +1,239 @@
+extends Node
+
+## GameManager autoload
+## Handles game state, scores, round progression, minigame registry, and scene transitions.
+## Server-authoritative: only the server calculates rankings and awards points.
+
+signal round_started(round_number: int, minigame_name: String)
+signal round_ended()
+signal game_ended()
+signal scores_updated()
+
+## Registry of minigames: name -> scene path
+var MINIGAME_REGISTRY: Dictionary = {}
+
+## Number of rounds per game
+var total_rounds: int = 5
+
+## Current round (1-indexed)
+var current_round: int = 0
+
+## Cumulative scores: peer_id -> total points
+var cumulative_scores: Dictionary = {}
+
+## Current round raw scores: peer_id -> raw score from minigame
+var round_raw_scores: Dictionary = {}
+
+## Current round ranking points: peer_id -> points awarded this round
+var round_points: Dictionary = {}
+
+## Order of minigames for this game session (shuffled)
+var _minigame_order: Array[String] = []
+
+## Whether a game session is active
+var _game_active: bool = false
+
+
+func _ready() -> void:
+	pass
+
+
+## Start a new game session. Called by host only.
+func start_game() -> void:
+	if not multiplayer.is_server():
+		return
+
+	current_round = 0
+	cumulative_scores.clear()
+	round_raw_scores.clear()
+	round_points.clear()
+	_game_active = true
+
+	# Initialize scores for all connected players
+	for peer_id: int in NetworkManager.players:
+		cumulative_scores[peer_id] = 0
+
+	# Build shuffled minigame order
+	_minigame_order.clear()
+	var available: Array = MINIGAME_REGISTRY.keys()
+	available.shuffle()
+	# If we have fewer minigames than rounds, cycle through them
+	while _minigame_order.size() < total_rounds:
+		for name: String in available:
+			_minigame_order.append(name)
+			if _minigame_order.size() >= total_rounds:
+				break
+
+	# Tell all clients to start and advance to first round
+	_sync_game_start.rpc(total_rounds, _minigame_order)
+	advance_round()
+
+
+## Advance to the next round. Called by host only.
+func advance_round() -> void:
+	if not multiplayer.is_server():
+		return
+
+	current_round += 1
+
+	if current_round > total_rounds:
+		_end_game()
+		return
+
+	round_raw_scores.clear()
+	round_points.clear()
+
+	var minigame_name: String = _minigame_order[current_round - 1]
+	var scene_path: String = MINIGAME_REGISTRY[minigame_name]
+
+	_load_minigame.rpc(current_round, minigame_name, scene_path)
+
+
+## Called by MiniGameBase when a player submits their score
+func submit_player_score(peer_id: int, raw_score: int) -> void:
+	if not multiplayer.is_server():
+		return
+
+	round_raw_scores[peer_id] = raw_score
+
+	# Check if all players have submitted
+	var all_submitted: bool = true
+	for pid: int in cumulative_scores:
+		if not round_raw_scores.has(pid):
+			all_submitted = false
+			break
+
+	if all_submitted:
+		_calculate_round_results()
+
+
+## Calculate rankings and award points. Server only.
+func _calculate_round_results() -> void:
+	var player_count: int = cumulative_scores.size()
+	round_points.clear()
+
+	# Sort players by raw score descending
+	var sorted_players: Array = round_raw_scores.keys()
+	sorted_players.sort_custom(func(a: int, b: int) -> bool:
+		return round_raw_scores[a] > round_raw_scores[b]
+	)
+
+	# Award points: 1st = N pts, 2nd = N-1, etc. Ties share higher value.
+	var rank: int = 1
+	var i: int = 0
+	while i < sorted_players.size():
+		# Find all players tied at this score
+		var tie_group: Array[int] = [sorted_players[i]]
+		var current_score: int = round_raw_scores[sorted_players[i]]
+		var j: int = i + 1
+		while j < sorted_players.size() and round_raw_scores[sorted_players[j]] == current_score:
+			tie_group.append(sorted_players[j])
+			j += 1
+
+		# All tied players get points for the highest rank in the group
+		var points: int = player_count - rank + 1
+		for pid: int in tie_group:
+			round_points[pid] = points
+			cumulative_scores[pid] += points
+
+		rank += tie_group.size()
+		i = j
+
+	# Send results to all clients
+	_sync_round_results.rpc(round_raw_scores, round_points, cumulative_scores)
+
+	# Transition to scoreboard
+	_load_scoreboard.rpc()
+
+
+## End the game. Server only.
+func _end_game() -> void:
+	_game_active = false
+	_load_end_game.rpc()
+
+
+## Register a minigame in the registry
+func register_minigame(minigame_name: String, scene_path: String) -> void:
+	MINIGAME_REGISTRY[minigame_name] = scene_path
+
+
+## Get the winner(s) - players with highest cumulative score
+func get_winners() -> Array[int]:
+	var max_score: int = 0
+	for pid: int in cumulative_scores:
+		var score: int = cumulative_scores[pid] as int
+		if score > max_score:
+			max_score = score
+
+	var winners: Array[int] = []
+	for pid: int in cumulative_scores:
+		var score: int = cumulative_scores[pid] as int
+		if score == max_score:
+			winners.append(pid)
+	return winners
+
+
+## Check if the game is still active
+func is_game_active() -> bool:
+	return _game_active
+
+
+# ---- RPCs ----
+
+@rpc("authority", "call_local", "reliable")
+func _sync_game_start(rounds: int, minigame_order: Array) -> void:
+	total_rounds = rounds
+	_minigame_order.clear()
+	for name: String in minigame_order:
+		_minigame_order.append(name)
+	current_round = 0
+	cumulative_scores.clear()
+	round_raw_scores.clear()
+	round_points.clear()
+	_game_active = true
+
+	# Initialize scores for all connected players
+	for peer_id: int in NetworkManager.players:
+		cumulative_scores[peer_id] = 0
+
+
+@rpc("authority", "call_local", "reliable")
+func _load_minigame(round_number: int, minigame_name: String, scene_path: String) -> void:
+	current_round = round_number
+	round_raw_scores.clear()
+	round_points.clear()
+	round_started.emit(round_number, minigame_name)
+	get_tree().change_scene_to_file(scene_path)
+
+
+@rpc("authority", "call_local", "reliable")
+func _sync_round_results(raw_scores: Dictionary, points: Dictionary, cumulative: Dictionary) -> void:
+	round_raw_scores = raw_scores
+	round_points = points
+	cumulative_scores = cumulative
+	round_ended.emit()
+	scores_updated.emit()
+
+
+@rpc("authority", "call_local", "reliable")
+func _load_scoreboard() -> void:
+	get_tree().change_scene_to_file("res://scenes/scoreboard.tscn")
+
+
+@rpc("authority", "call_local", "reliable")
+func _load_end_game() -> void:
+	_game_active = false
+	game_ended.emit()
+	get_tree().change_scene_to_file("res://scenes/end_game.tscn")
+
+
+## Return to main menu (can be called by any peer locally)
+func return_to_menu() -> void:
+	_game_active = false
+	current_round = 0
+	cumulative_scores.clear()
+	round_raw_scores.clear()
+	round_points.clear()
+	_minigame_order.clear()
+	NetworkManager.disconnect_game()
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

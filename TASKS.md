@@ -27,7 +27,7 @@
 
 ### Phase 5: Expanded Mini-Games (Race Games)
 - [DONE] Task 18: Type Racer minigame - Race: type displayed words exactly (keyboard, 8 words typed)
-- [ ] Task 19: Arrow Storm minigame - Race: press matching arrow keys as prompts appear (arrow keys, 20 correct arrows)
+- [DONE] Task 19: Arrow Storm minigame - Race: press matching arrow keys as prompts appear (arrow keys, 20 correct arrows)
 - [ ] Task 20: Copy Cat minigame - Race: reproduce a shown sequence of arrow presses (arrow keys, 5 sequences)
 - [ ] Task 21: Direction Dash minigame - Race: press arrow matching displayed direction word UP/DOWN/LEFT/RIGHT (arrow keys, 15 correct)
 - [ ] Task 22: Odd One Out minigame - Race: grid of colored rects, click the different one (mouse click, 10 rounds)

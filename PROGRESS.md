@@ -89,3 +89,8 @@
 - Files created/modified: `scripts/minigames/type_racer.gd`, `scenes/minigames/type_racer.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Type Racer minigame extending MiniGameBase. A word from a 56-word list is displayed; player types it exactly and presses Enter. Correct answers advance to the next word, wrong answers show the correct word. Race to 8 correct words. Score = number of correct words typed. Registered "Type Racer" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 19: Arrow Storm minigame - DONE
+- Files created/modified: `scripts/minigames/arrow_storm.gd`, `scenes/minigames/arrow_storm.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Arrow Storm minigame extending MiniGameBase. Arrow symbols (^, v, <, >) appear and player presses the matching arrow key. Correct presses advance to next arrow, wrong presses show the correct direction. Race to 20 correct arrows. Score = number of correct arrows pressed. Uses _unhandled_input for arrow key detection. Registered "Arrow Storm" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

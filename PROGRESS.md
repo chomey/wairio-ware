@@ -49,3 +49,8 @@
 - Files created/modified: `scenes/minigames/button_masher.tscn` (fixed invalid UID)
 - What was done: Traced the complete game loop: MainMenu → Lobby → Minigame (Button Masher) → Scoreboard → EndGame → MainMenu. Verified all scene transitions, RPC chains, score submission flow, node path references, autoload registrations, and scene file references. Fixed invalid custom UID in button_masher.tscn.
 - Verification: All @onready/$CenterContainer paths match .tscn node structures. All %UniqueNode references match unique_name_in_owner flags. All res:// scene paths point to existing files. Autoload paths in project.godot verified. Godot CLI unavailable due to sandbox restrictions (crashes on log directory creation). Manual review passed.
+
+## Task 11: Reaction Time minigame - DONE
+- Files created/modified: `scripts/minigames/reaction_time.gd`, `scenes/minigames/reaction_time.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Reaction Time minigame extending MiniGameBase. Players wait for a random delay (1.5-5s), then press spacebar when "PRESS SPACE!" appears. Best of 3 attempts within the 10s game window. Score = 10000 - best_reaction_ms (higher = better). Early presses trigger "TOO EARLY!" and restart the attempt. Registered in GameManager.MINIGAME_REGISTRY.
+- Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.

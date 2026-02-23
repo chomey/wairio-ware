@@ -17,7 +17,7 @@
 - [DONE] Task 10: End-to-end flow test - verify full game loop works: menu -> lobby -> countdown -> game -> scoreboard -> end
 
 ### Phase 4: More Mini-Games (one per task)
-- [ ] Task 11: Reaction Time minigame
+- [DONE] Task 11: Reaction Time minigame
 - [ ] Task 12: Quick Math minigame
 - [ ] Task 13: Target Click minigame
 - [ ] Task 14: Color Match minigame

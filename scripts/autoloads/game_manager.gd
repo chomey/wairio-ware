@@ -104,6 +104,7 @@ func _ready() -> void:
 	register_minigame("Tug of War", "res://scenes/minigames/tug_of_war.tscn")
 	register_minigame("Anagram Solve", "res://scenes/minigames/anagram_solve.tscn")
 	register_minigame("Math Sign", "res://scenes/minigames/math_sign.tscn")
+	register_minigame("Photo Memory", "res://scenes/minigames/photo_memory.tscn")
 
 
 ## Start a new game session. Called by host only.

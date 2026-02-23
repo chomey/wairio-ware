@@ -374,3 +374,8 @@
 - Files created/modified: `scripts/minigames/math_sign.gd`, `scenes/minigames/math_sign.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Math Sign race minigame extending MiniGameBase. An equation with a missing operator is displayed (e.g., "5 ? 3 = 15"). Player presses the correct operator key (+, -, *, /) on the keyboard. Equations are generated to always have integer results. Division uses whole-number divisors, subtraction ensures non-negative results. Race to 12 correct. Score = correct answers. Supports both regular and numpad keys, with Shift+= for + and Shift+8 for *. Registered "Math Sign" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Math Sign"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 76: Photo Memory minigame - DONE
+- Files created/modified: `scripts/minigames/photo_memory.gd`, `scenes/minigames/photo_memory.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Photo Memory race minigame extending MiniGameBase. A 4x4 grid of face-down cards with symbol pairs. Player clicks cards to flip them, revealing colored letters. Flipping two cards checks for a match - matched pairs stay revealed, mismatches flip back after 0.6s. Race to clear the board (find all 8 pairs). Score = pairs found. Registered "Photo Memory" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Photo Memory"` passed with both host and client reaching EndGame with positive scores.

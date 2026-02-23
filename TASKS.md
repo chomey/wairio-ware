@@ -90,7 +90,7 @@
 - [DONE] Task 74: Anagram Solve minigame - Race: scrambled word shown, type the correct unscrambled word (keyboard, 8 solved)
 - [DONE] Task 75: Math Sign minigame - Race: equation missing an operator (+, -, *, /), press the correct key (keyboard, 12 correct)
 - [DONE] Task 76: Photo Memory minigame - Race: grid of icons shown briefly then hidden, click to reveal matching pairs (mouse click, clear board)
-- [ ] Task 77: Greater Than minigame - Race: two numbers flash, press left or right arrow for the larger one (arrow keys, 15 correct)
+- [DONE] Task 77: Greater Than minigame - Race: two numbers flash, press left or right arrow for the larger one (arrow keys, 15 correct)
 - [ ] Task 78: Shadow Match minigame - Race: shown a silhouette, pick the matching shape from 4 options (mouse click, 10 matched)
 
 ### Phase 8: New Survival Mini-Games (Tasks 79–100)

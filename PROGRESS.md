@@ -379,3 +379,8 @@
 - Files created/modified: `scripts/minigames/photo_memory.gd`, `scenes/minigames/photo_memory.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Photo Memory race minigame extending MiniGameBase. A 4x4 grid of face-down cards with symbol pairs. Player clicks cards to flip them, revealing colored letters. Flipping two cards checks for a match - matched pairs stay revealed, mismatches flip back after 0.6s. Race to clear the board (find all 8 pairs). Score = pairs found. Registered "Photo Memory" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Photo Memory"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 77: Greater Than minigame - DONE
+- Files created/modified: `scripts/minigames/greater_than.gd`, `scenes/minigames/greater_than.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Greater Than race minigame extending MiniGameBase. Two random numbers (1-99, always different) are displayed side by side. Player presses left or right arrow key to select the larger number. Correct presses advance to the next pair, wrong presses show which side was bigger. Race to 15 correct. Score = correct answers. Registered "Greater Than" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Greater Than"` passed with both host and client reaching EndGame with positive scores.

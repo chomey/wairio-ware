@@ -60,7 +60,7 @@
 - [DONE] Task 47: Minefield minigame - Survival: grid of cells, click to reveal safe/mine, clear a path across (mouse click, hit mine = eliminated)
 - [DONE] Task 48: Asteroid Dodge minigame - Survival: ship moves in 2D, dodge asteroids from all sides (arrow keys, hit by asteroid = eliminated)
 - [DONE] Task 49: Conveyor Chaos minigame - Survival: stand on conveyors moving in different directions, stay in bounds (arrow keys, pushed off edge = eliminated)
-- [ ] Task 50: Laser Dodge minigame - Survival: lasers sweep across arena in patterns, move to gaps (arrow keys, hit by laser = eliminated)
+- [DONE] Task 50: Laser Dodge minigame - Survival: lasers sweep across arena in patterns, move to gaps (arrow keys, hit by laser = eliminated)
 - [ ] Task 51: Falling Blocks minigame - Survival: tetris-like blocks fall, move/rotate to not let them stack to top (arrow+space, stack reaches top = eliminated)
 
 ### Phase 7: Expanded Mini-Games (Score-Maximizer Games)

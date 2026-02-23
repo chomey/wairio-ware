@@ -139,3 +139,8 @@
 - Files created/modified: `scripts/minigames/safe_cracker.gd`, `scenes/minigames/safe_cracker.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Safe Cracker minigame extending MiniGameBase. A random 3-digit code is generated. Player types 3-digit guesses and presses Enter. Each digit gets feedback: HIT (correct digit, correct position), CLOSE (correct digit, wrong position), MISS (wrong digit). Shows last 5 guesses as history. Race to 3 codes cracked. Score = number of codes cracked. Uses LineEdit for input with text_submitted signal. Registered "Safe Cracker" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 29: Word Scramble minigame - DONE
+- Files created/modified: `scripts/minigames/word_scramble.gd`, `scenes/minigames/word_scramble.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Word Scramble minigame extending MiniGameBase. A word from a 50-word list is scrambled (Fisher-Yates shuffle, guaranteed different from original). Player types the unscrambled word and presses Enter. Correct answers advance to next word, wrong answers reveal the answer. Race to 5 correct words. Score = number of correct words. Case-insensitive comparison. Tracks used words to avoid repeats. Registered "Word Scramble" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

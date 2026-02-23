@@ -209,3 +209,8 @@
 - Files created/modified: `scripts/minigames/gravity_flip.gd`, `scenes/minigames/gravity_flip.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Gravity Flip survival minigame extending MiniGameBase. Auto-scrolling Flappy Bird-style platformer where obstacles (top/bottom pairs with a gap) scroll from right to left. Player presses spacebar to flip gravity direction (up/down). Gravity pulls player toward ceiling or floor. Hitting an obstacle eliminates the player. Gap size shrinks and obstacle speed increases over time. Score = survival time in tenths of seconds. Registered "Gravity Flip" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 43: Shrinking Arena minigame - DONE
+- Files created/modified: `scripts/minigames/shrinking_arena.gd`, `scenes/minigames/shrinking_arena.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Shrinking Arena survival minigame extending MiniGameBase. Play area shrinks over time from all sides with accelerating speed. Player moves with arrow keys to stay inside the shrinking boundary. Arena color shifts as it shrinks. Touching the boundary eliminates the player. Score = survival time in tenths of seconds. Registered "Shrinking Arena" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

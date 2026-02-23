@@ -53,7 +53,7 @@
 - [DONE] Task 40: Balancing Act minigame - Survival: keep a bar centered with left/right as it drifts (arrow keys, bar hits edge = eliminated)
 - [DONE] Task 41: Floor is Lava minigame - Survival: platforms shrink/disappear, move to stay on solid ground (arrow keys, fall off = eliminated)
 - [DONE] Task 42: Gravity Flip minigame - Survival: auto-scrolling platformer, press space to flip gravity (spacebar, hit obstacle = eliminated)
-- [ ] Task 43: Shrinking Arena minigame - Survival: play area shrinks over time, stay inside with arrow keys (arrow keys, touch boundary = eliminated)
+- [DONE] Task 43: Shrinking Arena minigame - Survival: play area shrinks over time, stay inside with arrow keys (arrow keys, touch boundary = eliminated)
 - [ ] Task 44: Hot Potato minigame - Survival: timer counts down, press space to throw, last holder loses (spacebar, holding when timer hits 0 = eliminated)
 - [ ] Task 45: Tightrope Walk minigame - Survival: character auto-walks, press left/right to balance (arrow keys, fall off = eliminated)
 - [ ] Task 46: Rising Water minigame - Survival: platforms at various heights, jump between them as water rises (arrow+space, submerged = eliminated)

@@ -114,3 +114,8 @@
 - Files created/modified: `scripts/minigames/number_sort.gd`, `scenes/minigames/number_sort.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Number Sort minigame extending MiniGameBase. 10 unique random numbers (1-99) are scattered as buttons across the play area at random non-overlapping positions. Player clicks them in ascending order. Correct clicks turn green and disable; wrong clicks show a hint. Race to sort all 10. Score = numbers correctly sorted. Registered "Number Sort" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 24: Speed Spell minigame - DONE
+- Files created/modified: `scripts/minigames/speed_spell.gd`, `scenes/minigames/speed_spell.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Speed Spell minigame extending MiniGameBase. Single letters (A-Z) are displayed one at a time, player types the matching key as fast as possible. Correct presses advance to the next letter, wrong presses show the correct letter. Race to 25 correct letters. Score = number of correct letters typed. Uses _unhandled_input for keyboard detection with keycode-to-letter conversion. Registered "Speed Spell" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

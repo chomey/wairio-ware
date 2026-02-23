@@ -394,3 +394,8 @@
 - Files created/modified: `scripts/minigames/stack_tower.gd`, `scenes/minigames/stack_tower.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Stack Tower survival minigame extending MiniGameBase. A white block slides back and forth across the top of the stack. Player presses spacebar to drop it. The block is trimmed to the overlapping portion with the block below — miss entirely and you're eliminated. Stack grows upward with camera scrolling. Block speed increases with each successful drop. Blocks are colored by hue rotation for visual variety. Score = survival time in tenths of seconds. Registered "Stack Tower" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Stack Tower"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 80: Cliff Hanger minigame - DONE
+- Files created/modified: `scripts/minigames/cliff_hanger.gd`, `scenes/minigames/cliff_hanger.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Cliff Hanger survival minigame extending MiniGameBase. Character slides toward a cliff edge with increasing speed. Player taps spacebar to brake. Each tap reduces speed by a fixed amount. If speed reaches zero, a new round starts with higher base speed. Overshooting the cliff eliminates the player. Visual feedback includes color-coded player (green/yellow/red by proximity), speed bar, ground/cliff rendering. Score = survival time in tenths of seconds. Registered "Cliff Hanger" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Cliff Hanger"` passed with both host and client reaching EndGame with positive scores.

@@ -189,3 +189,8 @@
 - Files created/modified: `scripts/minigames/path_tracer.gd`, `scenes/minigames/path_tracer.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Path Tracer minigame extending MiniGameBase. 8 numbered waypoints are scattered at random non-overlapping positions in the play area. Player clicks them in order (1, 2, 3...). Completing all 8 waypoints finishes one path and generates a new one. Race to 3 paths traced. Score = number of paths completed. Wrong clicks show a hint. Registered "Path Tracer" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 39: Equation Builder minigame - DONE
+- Files created/modified: `scripts/minigames/equation_builder.gd`, `scenes/minigames/equation_builder.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Equation Builder minigame extending MiniGameBase. A target number is shown along with available numbers. Player types a mathematical expression using +, -, * that evaluates to the target. Supports 2-operand and 3-operand puzzles with proper operator precedence evaluation. Race to 5 correct equations. Score = number of correct equations. Registered "Equation Builder" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

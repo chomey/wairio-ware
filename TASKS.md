@@ -47,7 +47,7 @@
 - [DONE] Task 36: Color Mixer minigame - Race: target color shown, click R/G/B buttons to match it (mouse click, 6 colors matched)
 - [DONE] Task 37: Maze Solver minigame - Race: navigate a small grid maze with arrow keys (arrow keys, reach the exit)
 - [DONE] Task 38: Path Tracer minigame - Race: numbered waypoints appear, click them in order (mouse click, 3 paths traced)
-- [ ] Task 39: Equation Builder minigame - Race: given a target number and operators, type the equation (keyboard, 5 equations)
+- [DONE] Task 39: Equation Builder minigame - Race: given a target number and operators, type the equation (keyboard, 5 equations)
 
 ### Phase 6: Expanded Mini-Games (Survival Games)
 - [ ] Task 40: Balancing Act minigame - Survival: keep a bar centered with left/right as it drifts (arrow keys, bar hits edge = eliminated)

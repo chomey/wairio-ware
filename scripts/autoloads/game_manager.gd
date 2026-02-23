@@ -64,6 +64,7 @@ func _ready() -> void:
 	register_minigame("Color Mixer", "res://scenes/minigames/color_mixer.tscn")
 	register_minigame("Maze Solver", "res://scenes/minigames/maze_solver.tscn")
 	register_minigame("Path Tracer", "res://scenes/minigames/path_tracer.tscn")
+	register_minigame("Equation Builder", "res://scenes/minigames/equation_builder.tscn")
 
 
 ## Start a new game session. Called by host only.

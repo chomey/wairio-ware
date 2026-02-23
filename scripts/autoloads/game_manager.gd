@@ -99,6 +99,7 @@ func _ready() -> void:
 	register_minigame("Countdown Catch", "res://scenes/minigames/countdown_catch.tscn")
 	register_minigame("Signal Flag", "res://scenes/minigames/signal_flag.tscn")
 	register_minigame("Speed Clicker", "res://scenes/minigames/speed_clicker.tscn")
+	register_minigame("Digit Span", "res://scenes/minigames/digit_span.tscn")
 
 
 ## Start a new game session. Called by host only.

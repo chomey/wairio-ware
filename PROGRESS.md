@@ -349,3 +349,8 @@
 - Files created/modified: `scripts/minigames/speed_clicker.gd`, `scenes/minigames/speed_clicker.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Speed Clicker race minigame extending MiniGameBase. Green and red targets spawn at random positions in the play area with decreasing intervals. Player clicks green targets to score (+1), clicking red targets penalizes (-1, min 0). Targets expire after 1.2 seconds. Spawn rate increases over time. Race to 15 correct green clicks. Score = correct green clicks. Registered "Speed Clicker" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Speed Clicker"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 71: Digit Span minigame - DONE
+- Files created/modified: `scripts/minigames/digit_span.gd`, `scenes/minigames/digit_span.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Digit Span race minigame extending MiniGameBase. Digits are shown one at a time in increasing sequence lengths (starting at 2). Player memorizes the sequence, then types it back via LineEdit. Correct recall advances to next length, wrong answer retries same length with new sequence. Race to recall length 9. Score = number of lengths completed. Registered "Digit Span" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Digit Span"` passed with both host and client reaching EndGame with positive scores.

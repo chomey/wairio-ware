@@ -494,3 +494,8 @@
 - Files created/modified: `scripts/minigames/symbol_match.gd`, `scenes/minigames/symbol_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Symbol Match race minigame extending MiniGameBase. A 4x4 grid of face-up symbols (8 pairs using @, #, $, %, &, *, +, =) with distinct colors. Player clicks two matching symbols to clear them. Selected cards get a colored border highlight, mismatches flash red briefly. Race to clear all 8 pairs. Score = pairs cleared. Registered "Symbol Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Symbol Match"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 100: Capital Quiz minigame - DONE
+- Files created/modified: `scripts/minigames/capital_quiz.gd`, `scenes/minigames/capital_quiz.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Capital Quiz race minigame extending MiniGameBase. A country name is displayed and the player types its capital city via LineEdit. Case-insensitive comparison. 40 well-known country-capital pairs. Correct answers advance to next country, wrong answers reveal the capital. Race to 8 correct. Score = correct answers. Registered "Capital Quiz" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Capital Quiz"` passed with both host and client reaching EndGame with positive scores.

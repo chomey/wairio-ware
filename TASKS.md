@@ -115,4 +115,4 @@
 - [DONE] Task 97: Rocket Launch minigame - Race: hold space to charge power meter, release in green zone, best of 5 attempts (spacebar, closest to center)
 - [DONE] Task 98: Frequency Match minigame - Race: a tone plays as visual pattern, select the matching frequency bar (mouse click, 10 matched)
 - [DONE] Task 99: Symbol Match minigame - Race: grid of symbols, find and click matching pairs (mouse click, 8 pairs cleared)
-- [ ] Task 100: Capital Quiz minigame - Race: country name shown, type its capital city (keyboard, 8 correct)
+- [DONE] Task 100: Capital Quiz minigame - Race: country name shown, type its capital city (keyboard, 8 correct)

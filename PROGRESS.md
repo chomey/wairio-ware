@@ -34,3 +34,8 @@
 - Files created/modified: `scenes/scoreboard.tscn`, `scripts/ui/scoreboard.gd`
 - What was done: Built Scoreboard UI with header row (Player / Round Pts / Total), dynamically populated score rows sorted by cumulative score descending, round counter label, and host-only Continue button. Script reads GameManager.round_points and cumulative_scores, formats rows with player names from NetworkManager, and calls GameManager.advance_round() on continue.
 - Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Scene path matches GameManager._load_scoreboard() reference.
+
+## Task 8: EndGame scene+script - DONE
+- Files created: `scenes/end_game.tscn`, `scripts/ui/end_game.gd`
+- What was done: Built EndGame UI with "Game Over!" title, winner display (handles ties), final standings table with rank/player/score columns sorted by cumulative score descending (ties share rank), and a "Return to Menu" button that calls GameManager.return_to_menu(). Rankings are dynamically built from GameManager.cumulative_scores.
+- Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Scene path matches GameManager._load_end_game() reference. Godot CLI unavailable in sandbox.

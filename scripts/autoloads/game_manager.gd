@@ -43,6 +43,7 @@ func _ready() -> void:
 	register_minigame("Memory Sequence", "res://scenes/minigames/memory_sequence.tscn")
 	register_minigame("Dodge Falling", "res://scenes/minigames/dodge_falling.tscn")
 	register_minigame("Rhythm Tap", "res://scenes/minigames/rhythm_tap.tscn")
+	register_minigame("Type Racer", "res://scenes/minigames/type_racer.tscn")
 
 
 ## Start a new game session. Called by host only.
@@ -103,15 +104,25 @@ func submit_player_score(peer_id: int, raw_score: int) -> void:
 
 	round_raw_scores[peer_id] = raw_score
 
-	# Check if all players have submitted
-	var all_submitted: bool = true
-	for pid: int in cumulative_scores:
-		if not round_raw_scores.has(pid):
-			all_submitted = false
-			break
+	var total_players: int = cumulative_scores.size()
+	var submitted_count: int = round_raw_scores.size()
 
-	if all_submitted:
+	# Check if all players have submitted
+	if submitted_count >= total_players:
 		_calculate_round_results()
+		return
+
+	# Check if N-1 players have submitted -> force end for remaining player(s)
+	if submitted_count >= total_players - 1 and total_players >= 2:
+		_force_minigame_end()
+
+
+## Force end the current minigame for all peers.
+## Called when N-1 players have submitted scores.
+func _force_minigame_end() -> void:
+	var current_scene: Node = get_tree().current_scene
+	if current_scene is MiniGameBase:
+		current_scene.force_end_game.rpc()
 
 
 ## Calculate rankings and award points. Server only.
@@ -187,7 +198,7 @@ func is_game_active() -> bool:
 
 # ---- RPCs ----
 
-@rpc("authority", "call_local", "reliable")
+@rpc("authority", "reliable")
 func _sync_game_start(rounds: int, minigame_order: Array) -> void:
 	total_rounds = rounds
 	_minigame_order.clear()

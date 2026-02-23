@@ -84,3 +84,8 @@
 - Files created/modified: `scripts/minigames/rhythm_tap.gd`, `scenes/minigames/rhythm_tap.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Rhythm Tap minigame extending MiniGameBase. Cyan beat indicators scroll down a track toward a white hit zone. Player presses spacebar to hit beats in time. Perfect hits (within 80ms) score 3 points, Good hits (within 200ms) score 1 point, misses score 0. Features combo tracking display. BPM set to 100 with 1.2s lead time for beat visibility. Registered "Rhythm Tap" in GameManager.MINIGAME_REGISTRY.
 - Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.
+
+## Task 18: Type Racer minigame - DONE
+- Files created/modified: `scripts/minigames/type_racer.gd`, `scenes/minigames/type_racer.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Type Racer minigame extending MiniGameBase. A word from a 56-word list is displayed; player types it exactly and presses Enter. Correct answers advance to the next word, wrong answers show the correct word. Race to 8 correct words. Score = number of correct words typed. Registered "Type Racer" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

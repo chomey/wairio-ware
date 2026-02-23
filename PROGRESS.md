@@ -419,3 +419,8 @@
 - Files created/modified: `scripts/minigames/thermal_rise.gd`, `scenes/minigames/thermal_rise.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Thermal Rise survival minigame extending MiniGameBase. Character floats upward automatically through gaps in horizontal platforms. Use left/right arrow keys to navigate through gaps. Platforms scroll downward with increasing speed. Gap width shrinks over time. Hitting a platform eliminates the player. Visual feedback includes heat effect at bottom, glowing player, gap edge highlights. Score = survival time in tenths of seconds. Registered "Thermal Rise" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Thermal Rise"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 85: Rail Grind minigame - DONE
+- Files created/modified: `scripts/minigames/rail_grind.gd`, `scenes/minigames/rail_grind.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Rail Grind survival minigame extending MiniGameBase. Character rides on one of 3 horizontal rails. Obstacles scroll from right to left with increasing speed. Press UP/DOWN to switch tracks and dodge obstacles. Sometimes 2 tracks are blocked simultaneously (after 3s). Hitting an obstacle eliminates the player. Score = survival time in tenths of seconds. Registered "Rail Grind" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Rail Grind"` passed with both host and client reaching EndGame with positive scores.

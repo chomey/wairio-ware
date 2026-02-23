@@ -484,3 +484,8 @@
 - Files created/modified: `scripts/minigames/rocket_launch.gd`, `scenes/minigames/rocket_launch.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Rocket Launch race minigame extending MiniGameBase. Player holds spacebar to charge a power meter that fills continuously. Release in the green zone (40-60%) for a good launch — closer to center (50%) is better. Overcharging to 100% auto-releases. Best of 5 attempts. Score = 10000 - (best_error * 10000), higher is better. Visual meter with red/green zones and charge indicator. Attempt markers color-code results. Registered "Rocket Launch" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Rocket Launch"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 98: Frequency Match minigame - DONE
+- Files created/modified: `scripts/minigames/frequency_match.gd`, `scenes/minigames/frequency_match.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Frequency Match race minigame extending MiniGameBase. A visual sine wave animates at the target frequency. Player selects the matching frequency bar from 4 choices with varying heights and colors (blue=low, red=high). Frequencies range from 1.0-6.0 Hz with bars sized proportionally. Wrong clicks show error feedback. Race to 10 correct matches. Score = matches made. Registered "Frequency Match" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Frequency Match"` passed with both host and client reaching EndGame with positive scores.

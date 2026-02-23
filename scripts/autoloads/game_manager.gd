@@ -126,6 +126,7 @@ func _ready() -> void:
 	register_minigame("Flip Memory", "res://scenes/minigames/flip_memory.tscn")
 	register_minigame("Firewalk", "res://scenes/minigames/firewalk.tscn")
 	register_minigame("Rocket Launch", "res://scenes/minigames/rocket_launch.tscn")
+	register_minigame("Frequency Match", "res://scenes/minigames/frequency_match.tscn")
 
 
 ## Start a new game session. Called by host only.

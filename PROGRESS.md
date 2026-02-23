@@ -94,3 +94,8 @@
 - Files created/modified: `scripts/minigames/arrow_storm.gd`, `scenes/minigames/arrow_storm.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Arrow Storm minigame extending MiniGameBase. Arrow symbols (^, v, <, >) appear and player presses the matching arrow key. Correct presses advance to next arrow, wrong presses show the correct direction. Race to 20 correct arrows. Score = number of correct arrows pressed. Uses _unhandled_input for arrow key detection. Registered "Arrow Storm" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 20: Copy Cat minigame - DONE
+- Files created/modified: `scripts/minigames/copy_cat.gd`, `scenes/minigames/copy_cat.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Copy Cat minigame extending MiniGameBase. A sequence of arrows is shown one at a time (flash + pause), then the player reproduces it by pressing arrow keys in the correct order. Starts with length 2, grows by 1 each successful sequence. Wrong press resets input for that sequence. Race to 5 completed sequences. Score = number of sequences completed. Registered "Copy Cat" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

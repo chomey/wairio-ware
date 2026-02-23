@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/minigames/memory_sequence.gd" id="1_script"]
+
+[node name="MemorySequence" type="Node"]
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.12, 0.2, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MEMORY SEQUENCE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxInfo" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer/HBoxInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Time: 10.0"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer/HBoxInfo"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer/HBoxInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="CountdownLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelGrid" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Panel0" type="Button" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(120, 120)
+text = "RED"
+
+[node name="Panel1" type="Button" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(120, 120)
+text = "GREEN"
+
+[node name="Panel2" type="Button" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(120, 120)
+text = "BLUE"
+
+[node name="Panel3" type="Button" parent="VBoxContainer/PanelGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(120, 120)
+text = "YELLOW"
+
+[node name="InstructionLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Get ready..."
+horizontal_alignment = 1
+vertical_alignment = 1

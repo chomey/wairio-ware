@@ -69,3 +69,8 @@
 - Files created/modified: `scripts/minigames/color_match.gd`, `scenes/minigames/color_match.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Color Match minigame (Stroop test) extending MiniGameBase. A color word (RED, GREEN, BLUE, YELLOW, PURPLE) is displayed in a random color. Players press "MATCH" if the word matches the display color, or "NO MATCH" if it doesn't. 50% chance of match per prompt. Score = number of correct answers within 10 seconds. Registered "Color Match" in GameManager.MINIGAME_REGISTRY.
 - Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.
+
+## Task 15: Memory Sequence minigame - DONE
+- Files created/modified: `scripts/minigames/memory_sequence.gd`, `scenes/minigames/memory_sequence.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Memory Sequence minigame extending MiniGameBase. Four colored panels (Red, Green, Blue, Yellow) in a 2x2 grid flash in a sequence. Player must repeat the sequence by clicking panels in the correct order. Each successful repetition adds one more item. Wrong press resets the sequence. Score = longest sequence completed within 10 seconds. Uses Timer-based flash/pause system for sequence display. Registered "Memory Sequence" in GameManager.MINIGAME_REGISTRY.
+- Verification: Manual code review passed. All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides. Scene path registered in GameManager.

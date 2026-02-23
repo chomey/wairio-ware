@@ -24,3 +24,8 @@
 - Files created/modified: `scenes/main_menu.tscn`, `scripts/ui/main_menu.gd`
 - What was done: Built full MainMenu UI with VBoxContainer layout containing title, player name input, IP address input (default 127.0.0.1), Host Game and Join Game buttons, and a status label for connection feedback. Script handles validation, calls NetworkManager.host_game/join_game, disables buttons during connection, shows errors, and transitions to lobby on success.
 - Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Signal connections match NetworkManager API.
+
+## Task 6: Lobby scene+script - DONE
+- Files created/modified: `scenes/lobby.tscn`, `scripts/ui/lobby.gd`
+- What was done: Built Lobby UI with VBoxContainer layout containing title, player list (dynamically populated from NetworkManager.players), status label showing player count, host-only Start Game button (hidden for non-host), and Back to Menu button. Script handles player connect/disconnect events to refresh the list, validates minimum 2 players before starting, and calls GameManager.start_game() or GameManager.return_to_menu() as appropriate.
+- Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Signal connections match NetworkManager/GameManager APIs. Godot CLI unavailable in sandbox.

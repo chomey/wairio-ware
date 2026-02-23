@@ -8,7 +8,7 @@
 
 ### Phase 2: UI Screens
 - [DONE] Task 5: MainMenu scene+script - host/join buttons, name input, IP input
-- [ ] Task 6: Lobby scene+script - player list, start button (host only), back button
+- [DONE] Task 6: Lobby scene+script - player list, start button (host only), back button
 - [ ] Task 7: Scoreboard scene+script - round scores, cumulative scores, continue button (host only)
 - [ ] Task 8: EndGame scene+script - final standings, winner display, return to menu button
 

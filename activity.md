@@ -5,8 +5,8 @@ This file logs what the agent accomplishes during each iteration:
 
 ## Current Status
 **Last Updated:** 2026-02-22
-**Tasks Completed:** 1
-**Current Task:** Task 1 - Home menu with Play and Settings
+**Tasks Completed:** 2
+**Current Task:** Task 2 - Waiting room
 
 ---
 
@@ -20,5 +20,17 @@ This file logs what the agent accomplishes during each iteration:
   - Verified all scene-script references, node paths, and signal connections are correct
   - Validated project loads in Godot 4.6.1 headless mode with no GDScript errors
 - **Result:** PASS — Home menu with Play, Settings, name input, network handshake all functional
+- **Screenshot:** N/A (headless validation, no GUI screenshot)
+
+### 2026-02-22 — Task 2: Waiting Room
+- **Started:** Working on Task 2 - Waiting room showing connected players and ready count
+- **Changes:**
+  - Rewrote `waiting_room.gd` with full interactive player list: green connection indicators, [Host] tag for server player, player count showing current/max
+  - Added `_on_peer_disconnected()` handler so player list updates when someone leaves
+  - Added `_on_server_disconnected()` handler so clients return to main menu if host leaves
+  - Extracted `_cleanup_and_return()` for cancel and disconnect flows — safely closes peer, clears players, returns to main menu
+  - Added `_test_feature()` covering: player count label format, player list entry count, button visibility
+  - Validated project loads in Godot 4.6.1 headless mode with no GDScript errors
+- **Result:** PASS — Waiting room with interactive player list, cancel support, disconnect handling all functional
 - **Screenshot:** N/A (headless validation, no GUI screenshot)
 

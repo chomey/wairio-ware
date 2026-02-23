@@ -26,12 +26,12 @@ Highest scoring players get the most points, for each game, summed at the end.
   }, 
   {
     "category": "feature",
-    "description": “Waiting room that shows who / how many players are ready to play”,
-    "steps": [
+    “description”: “Waiting room that shows who / how many players are ready to play”,
+    “steps”: [
       “Interactive UI showing players and how many”
 “Support cancel to go back to main menu”
     ],
-    "passes": false
+    “passes”: true
   }, 
 {
     "category": "feature",

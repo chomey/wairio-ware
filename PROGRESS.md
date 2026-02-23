@@ -29,3 +29,8 @@
 - Files created/modified: `scenes/lobby.tscn`, `scripts/ui/lobby.gd`
 - What was done: Built Lobby UI with VBoxContainer layout containing title, player list (dynamically populated from NetworkManager.players), status label showing player count, host-only Start Game button (hidden for non-host), and Back to Menu button. Script handles player connect/disconnect events to refresh the list, validates minimum 2 players before starting, and calls GameManager.start_game() or GameManager.return_to_menu() as appropriate.
 - Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Signal connections match NetworkManager/GameManager APIs. Godot CLI unavailable in sandbox.
+
+## Task 7: Scoreboard scene+script - DONE
+- Files created/modified: `scenes/scoreboard.tscn`, `scripts/ui/scoreboard.gd`
+- What was done: Built Scoreboard UI with header row (Player / Round Pts / Total), dynamically populated score rows sorted by cumulative score descending, round counter label, and host-only Continue button. Script reads GameManager.round_points and cumulative_scores, formats rows with player names from NetworkManager, and calls GameManager.advance_round() on continue.
+- Verification: Manual code review passed. All @onready node paths match .tscn structure. Strong typing on all variables/functions. Scene path matches GameManager._load_scoreboard() reference.

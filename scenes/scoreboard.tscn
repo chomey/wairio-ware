@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/scoreboard.gd" id="1_scoreboard"]
+
+[node name="Scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_scoreboard")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.15, 0.2, 1)
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Round Results"
+horizontal_alignment = 1
+
+[node name="RoundLabel" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Round 0 / 0"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 8)
+
+[node name="HeaderRow" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="NameHeader" type="Label" parent="CenterContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player"
+horizontal_alignment = 1
+
+[node name="RoundHeader" type="Label" parent="CenterContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Round Pts"
+horizontal_alignment = 1
+
+[node name="TotalHeader" type="Label" parent="CenterContainer/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Total"
+horizontal_alignment = 1
+
+[node name="ScoreList" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 150)
+theme_override_constants/separation = 6
+
+[node name="Spacer2" type="Control" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 8)
+
+[node name="ContinueButton" type="Button" parent="CenterContainer"]
+layout_mode = 2
+text = "Continue"

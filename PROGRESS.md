@@ -109,3 +109,8 @@
 - Files created/modified: `scripts/minigames/odd_one_out.gd`, `scenes/minigames/odd_one_out.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Odd One Out minigame extending MiniGameBase. A 4x4 grid of colored buttons is displayed where all but one share the same color. Player clicks the differently-colored button to score. Each correct click generates a new round with random colors from a 7-color pool. Race to 10 correct clicks. Score = number of correct clicks. Registered "Odd One Out" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 23: Number Sort minigame - DONE
+- Files created/modified: `scripts/minigames/number_sort.gd`, `scenes/minigames/number_sort.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Number Sort minigame extending MiniGameBase. 10 unique random numbers (1-99) are scattered as buttons across the play area at random non-overlapping positions. Player clicks them in ascending order. Correct clicks turn green and disable; wrong clicks show a hint. Race to sort all 10. Score = numbers correctly sorted. Registered "Number Sort" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

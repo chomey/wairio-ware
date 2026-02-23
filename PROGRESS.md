@@ -459,3 +459,8 @@
 - Files created/modified: `scripts/minigames/sinking_ship.gd`, `scenes/minigames/sinking_ship.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Sinking Ship survival minigame extending MiniGameBase. Ship hull rendered with wooden planks. Water rises based on base rate + active leak count. Leaks spawn on hull walls (left, right, bottom) with pulsing visual effect and spray lines. Player clicks leaks to plug them, which also drains a small amount of water. Water level shown visually inside hull and as a side bar that color-shifts (blue/yellow/red). Ship sinking (water 100%) eliminates the player. Score = survival time in tenths of seconds. Registered "Sinking Ship" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Sinking Ship"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 93: Flag Raise minigame - DONE
+- Files created/modified: `scripts/minigames/flag_raise.gd`, `scenes/minigames/flag_raise.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Flag Raise race minigame extending MiniGameBase. A beat indicator oscillates across a bar; player taps spacebar when it's in the green zone to raise a flag. Good taps raise the flag by 8%, off-rhythm taps lower it by 5%. Flag color shifts from red (bottom) to green (top). Beat zone repositions every 3 good taps for variety. Indicator speed derived from 90 BPM. Race to raise the flag to 100%. Score = number of good taps. Registered "Flag Raise" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Flag Raise"` passed with both host and client reaching EndGame with positive scores.

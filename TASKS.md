@@ -72,7 +72,7 @@
 - [DONE] Task 56: Ice Breaker minigame - Race: tap spacebar with correct timing to break ice blocks in sequence (spacebar, 12 blocks broken)
 - [DONE] Task 57: Bubble Pop minigame - Race: bubbles float up with letters on them, type the letter to pop (keyboard, 20 popped)
 - [DONE] Task 58: Mirror Draw minigame - Race: arrow sequence shown, input it in reverse order (arrow keys, 8 sequences reversed)
-- [ ] Task 59: Rotation Lock minigame - Race: rotating dial with pointer, press space when aligned with target (spacebar, 10 targets hit)
+- [DONE] Task 59: Rotation Lock minigame - Race: rotating dial with pointer, press space when aligned with target (spacebar, 10 targets hit)
 - [ ] Task 60: Word Chain minigame - Race: given a word, type a word starting with its last letter (keyboard, 8 chains)
 - [ ] Task 61: Number Crunch minigame - Race: stream of numbers shown, press space only when the number is prime (spacebar, 12 correct)
 - [ ] Task 62: Pipe Connect minigame - Race: rotate pipe tiles to connect start to end (mouse click, 5 puzzles solved)

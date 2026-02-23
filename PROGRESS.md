@@ -294,3 +294,8 @@
 - Files created/modified: `scripts/minigames/rotation_lock.gd`, `scenes/minigames/rotation_lock.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Rotation Lock race minigame extending MiniGameBase. A pointer rotates around a circular dial rendered via custom _draw. A green target zone arc appears at a random angle. Player presses spacebar when the pointer aligns with the target. Target arc shrinks as progress increases (30 -> 15 degrees). Rotation speed increases with each hit (+12 deg/s). Miss penalty pauses briefly. Race to 10 targets hit. Score = targets hit. Registered "Rotation Lock" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Rotation Lock"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 60: Word Chain minigame - DONE
+- Files created/modified: `scripts/minigames/word_chain.gd`, `scenes/minigames/word_chain.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Word Chain race minigame extending MiniGameBase. A word is displayed and the player must type a word from the built-in word list that starts with the last letter of the current word. Valid answers become the new current word, continuing the chain. Words can't be reused. Uses a 120-word curated word list indexed by first letter for validation. Race to 8 chains. Score = chains completed. Registered "Word Chain" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Word Chain"` passed with both host and client reaching EndGame with positive scores.

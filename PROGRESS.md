@@ -354,3 +354,8 @@
 - Files created/modified: `scripts/minigames/digit_span.gd`, `scenes/minigames/digit_span.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Digit Span race minigame extending MiniGameBase. Digits are shown one at a time in increasing sequence lengths (starting at 2). Player memorizes the sequence, then types it back via LineEdit. Correct recall advances to next length, wrong answer retries same length with new sequence. Race to recall length 9. Score = number of lengths completed. Registered "Digit Span" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Digit Span"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 72: Block Breaker minigame - DONE
+- Files created/modified: `scripts/minigames/block_breaker.gd`, `scenes/minigames/block_breaker.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Block Breaker race minigame extending MiniGameBase. Classic breakout gameplay: paddle moves with arrow keys, ball bounces to break colored blocks (4 rows x 8 cols). Ball reflects off walls, paddle, and blocks. Ball angle varies based on paddle hit position. Blocks respawn if all cleared before target. Ball resets if it falls below paddle. Race to 20 blocks broken. Score = blocks broken. Registered "Block Breaker" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Block Breaker"` passed with both host and client reaching EndGame with positive scores.

@@ -169,3 +169,8 @@
 - Files created/modified: `scripts/minigames/shopping_cart.gd`, `scenes/minigames/shopping_cart.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Shopping Cart minigame extending MiniGameBase. Items with random prices ($0.50-$9.99) are shown one at a time. Player types the running total and presses Enter. Correct answers advance to next item, wrong answers reset the cart to $0. Accepts optional $ prefix. Race to 8 correct totals. Score = number of correct totals. Registered "Shopping Cart" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 35: Binary Convert minigame - DONE
+- Files created/modified: `scripts/minigames/binary_convert.gd`, `scenes/minigames/binary_convert.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Binary Convert minigame extending MiniGameBase. A random decimal number (1-31) is shown and the player types its binary representation. Correct answers advance to the next number, wrong answers show the correct binary. Leading zeros are stripped for comparison. Race to 8 correct conversions. Score = number of correct conversions. Registered "Binary Convert" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

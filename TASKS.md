@@ -43,7 +43,7 @@
 - [DONE] Task 32: Rapid Toggle minigame - Race: grid of dark squares, click to light them all up (mouse click, all 16 lit)
 - [DONE] Task 33: Chain Reaction minigame - Race: click to place circles that expand and trigger others (mouse click, clear 30 targets)
 - [DONE] Task 34: Shopping Cart minigame - Race: item+price shown, type running total (keyboard, 8 items totaled)
-- [ ] Task 35: Binary Convert minigame - Race: decimal number shown, type binary representation (keyboard, 8 conversions)
+- [DONE] Task 35: Binary Convert minigame - Race: decimal number shown, type binary representation (keyboard, 8 conversions)
 - [ ] Task 36: Color Mixer minigame - Race: target color shown, click R/G/B buttons to match it (mouse click, 6 colors matched)
 - [ ] Task 37: Maze Solver minigame - Race: navigate a small grid maze with arrow keys (arrow keys, reach the exit)
 - [ ] Task 38: Path Tracer minigame - Race: numbered waypoints appear, click them in order (mouse click, 3 paths traced)

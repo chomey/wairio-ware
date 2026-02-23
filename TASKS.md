@@ -39,7 +39,7 @@
 - [DONE] Task 28: Safe Cracker minigame - Race: guess 3-digit code with hot/cold hints after each attempt (keyboard, crack the code)
 - [DONE] Task 29: Word Scramble minigame - Race: unscramble anagram, type correct word (keyboard, 5 words)
 - [DONE] Task 30: Morse Decode minigame - Race: short/long beep patterns shown, type the letter (keyboard, 10 letters)
-- [ ] Task 31: Pixel Painter minigame - Race: fill in marked cells in a grid by clicking them (mouse click, fill 20 cells)
+- [DONE] Task 31: Pixel Painter minigame - Race: fill in marked cells in a grid by clicking them (mouse click, fill 20 cells)
 - [ ] Task 32: Rapid Toggle minigame - Race: grid of dark squares, click to light them all up (mouse click, all 16 lit)
 - [ ] Task 33: Chain Reaction minigame - Race: click to place circles that expand and trigger others (mouse click, clear 30 targets)
 - [ ] Task 34: Shopping Cart minigame - Race: item+price shown, type running total (keyboard, 8 items totaled)

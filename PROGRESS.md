@@ -149,3 +149,8 @@
 - Files created/modified: `scripts/minigames/morse_decode.gd`, `scenes/minigames/morse_decode.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Morse Decode minigame extending MiniGameBase. Morse code patterns (dots and dashes) are displayed for a random letter. Player presses the matching letter key. Correct presses advance to the next pattern, wrong presses show a hint. Race to 10 correct decodes. Score = number of letters decoded. Full A-Z morse code dictionary. Uses _unhandled_input for keyboard detection. Registered "Morse Decode" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.
+
+## Task 31: Pixel Painter minigame - DONE
+- Files created/modified: `scripts/minigames/pixel_painter.gd`, `scenes/minigames/pixel_painter.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Pixel Painter minigame extending MiniGameBase. A 6x6 grid displays target cells (orange/translucent) that the player clicks to fill (green). Each pattern has 4-6 target cells. Completing a pattern generates a new one. Race to fill 20 cells total. Score = number of cells filled. Registered "Pixel Painter" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed (no errors). All %UniqueNode references match unique_name_in_owner nodes in .tscn. Strong typing throughout. Extends MiniGameBase correctly with _on_game_start/_on_game_end overrides.

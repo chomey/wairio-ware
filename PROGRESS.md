@@ -309,3 +309,8 @@
 - Files created/modified: `scripts/minigames/pipe_connect.gd`, `scenes/minigames/pipe_connect.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Pipe Connect race minigame extending MiniGameBase. A 5x4 grid of pipe tiles with a path generated from a start point (left edge) to an end point (right edge). Player clicks tiles to rotate them 90 degrees clockwise. Pipes visually show connections (UP/DOWN/LEFT/RIGHT) and highlight green when connected to the start. Path generation uses random walk with backtracking. Puzzle randomization rotates tiles randomly and verifies puzzle isn't already solved. Race to 5 puzzles solved. Score = puzzles solved. Registered "Pipe Connect" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Pipe Connect"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 63: Falling Letters minigame - DONE
+- Files created/modified: `scripts/minigames/falling_letters.gd`, `scenes/minigames/falling_letters.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Falling Letters race minigame extending MiniGameBase. Letters rain down from the top of a play area, getting faster over time. Player types the matching letter key to catch them before they hit the bottom. Targets the lowest matching letter first. Letters shift from white to red as they approach the bottom. Spawn rate and fall speed increase with progress. Race to 25 typed. Score = letters typed. Registered "Falling Letters" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Falling Letters"` passed with both host and client reaching EndGame with positive scores.

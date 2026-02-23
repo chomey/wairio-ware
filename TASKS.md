@@ -76,7 +76,7 @@
 - [DONE] Task 60: Word Chain minigame - Race: given a word, type a word starting with its last letter (keyboard, 8 chains)
 - [DONE] Task 61: Number Crunch minigame - Race: stream of numbers shown, press space only when the number is prime (spacebar, 12 correct)
 - [DONE] Task 62: Pipe Connect minigame - Race: rotate pipe tiles to connect start to end (mouse click, 5 puzzles solved)
-- [ ] Task 63: Falling Letters minigame - Race: letters rain down, type them before they hit the bottom (keyboard, 25 typed)
+- [DONE] Task 63: Falling Letters minigame - Race: letters rain down, type them before they hit the bottom (keyboard, 25 typed)
 - [ ] Task 64: Color Flood minigame - Race: fill a grid by selecting colors to expand from the corner, fewest moves = best score (mouse click, clear 5 boards)
 - [ ] Task 65: Spot the Diff minigame - Race: two grids shown side-by-side, click the cell that differs (mouse click, 8 found)
 - [ ] Task 66: Conveyor Sort minigame - Race: items slide across, press left/right to sort into correct bins (arrow keys, 15 sorted)

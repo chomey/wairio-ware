@@ -344,3 +344,8 @@
 - Files created/modified: `scripts/minigames/signal_flag.gd`, `scenes/minigames/signal_flag.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Signal Flag race minigame extending MiniGameBase. A 4x4 grid of colored squares displays a flag pattern from 26 NATO phonetic alphabet flags. Player selects the matching flag name from 4 multiple-choice buttons. Race to 10 correct identifications. Score = number of correct IDs. Tracks used flags to avoid repeats. Registered "Signal Flag" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Signal Flag"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 70: Speed Clicker minigame - DONE
+- Files created/modified: `scripts/minigames/speed_clicker.gd`, `scenes/minigames/speed_clicker.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Speed Clicker race minigame extending MiniGameBase. Green and red targets spawn at random positions in the play area with decreasing intervals. Player clicks green targets to score (+1), clicking red targets penalizes (-1, min 0). Targets expire after 1.2 seconds. Spawn rate increases over time. Race to 15 correct green clicks. Score = correct green clicks. Registered "Speed Clicker" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Speed Clicker"` passed with both host and client reaching EndGame with positive scores.

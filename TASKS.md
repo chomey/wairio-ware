@@ -83,7 +83,7 @@
 - [DONE] Task 67: Hex Match minigame - Race: match hex color codes to displayed colors from multiple choices (mouse click, 10 matched)
 - [DONE] Task 68: Countdown Catch minigame - Race: timer counts down from random number, press space at exactly 0, closest to zero scores best (spacebar, best of 5 attempts)
 - [DONE] Task 69: Signal Flag minigame - Race: shown a flag pattern of colored squares, select the matching name (mouse click, 10 identified)
-- [ ] Task 70: Speed Clicker minigame - Race: targets appear in sequence, click only GREEN ones, avoid RED ones (mouse click, 15 correct)
+- [DONE] Task 70: Speed Clicker minigame - Race: targets appear in sequence, click only GREEN ones, avoid RED ones (mouse click, 15 correct)
 - [ ] Task 71: Digit Span minigame - Race: shown increasing sequences of digits, type them back from memory (keyboard, recall length 9)
 - [ ] Task 72: Block Breaker minigame - Race: paddle bounces ball to break blocks above (arrow keys, 20 blocks broken)
 - [ ] Task 73: Tug of War minigame - Race: mash spacebar to pull a rope marker to your side (spacebar, marker reaches end)

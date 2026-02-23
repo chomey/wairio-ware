@@ -74,7 +74,7 @@
 - [DONE] Task 58: Mirror Draw minigame - Race: arrow sequence shown, input it in reverse order (arrow keys, 8 sequences reversed)
 - [DONE] Task 59: Rotation Lock minigame - Race: rotating dial with pointer, press space when aligned with target (spacebar, 10 targets hit)
 - [DONE] Task 60: Word Chain minigame - Race: given a word, type a word starting with its last letter (keyboard, 8 chains)
-- [ ] Task 61: Number Crunch minigame - Race: stream of numbers shown, press space only when the number is prime (spacebar, 12 correct)
+- [DONE] Task 61: Number Crunch minigame - Race: stream of numbers shown, press space only when the number is prime (spacebar, 12 correct)
 - [ ] Task 62: Pipe Connect minigame - Race: rotate pipe tiles to connect start to end (mouse click, 5 puzzles solved)
 - [ ] Task 63: Falling Letters minigame - Race: letters rain down, type them before they hit the bottom (keyboard, 25 typed)
 - [ ] Task 64: Color Flood minigame - Race: fill a grid by selecting colors to expand from the corner, fewest moves = best score (mouse click, clear 5 boards)

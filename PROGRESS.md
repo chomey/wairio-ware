@@ -299,3 +299,8 @@
 - Files created/modified: `scripts/minigames/word_chain.gd`, `scenes/minigames/word_chain.tscn`, `scripts/autoloads/game_manager.gd`
 - What was done: Created Word Chain race minigame extending MiniGameBase. A word is displayed and the player must type a word from the built-in word list that starts with the last letter of the current word. Valid answers become the new current word, continuing the chain. Words can't be reused. Uses a 120-word curated word list indexed by first letter for validation. Race to 8 chains. Score = chains completed. Registered "Word Chain" in GameManager.MINIGAME_REGISTRY.
 - Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Word Chain"` passed with both host and client reaching EndGame with positive scores.
+
+## Task 61: Number Crunch minigame - DONE
+- Files created/modified: `scripts/minigames/number_crunch.gd`, `scenes/minigames/number_crunch.tscn`, `scripts/autoloads/game_manager.gd`
+- What was done: Created Number Crunch race minigame extending MiniGameBase. Numbers stream on screen (mix of primes and composites, ~40% primes). Player presses spacebar only when the number is prime. Correct prime presses score a point, wrong presses show error feedback. Numbers auto-advance after a timer that gets shorter with progress (1.5s down to 0.7s). Missing a prime also shows feedback. Race to 12 correct. Score = correct prime identifications. Registered "Number Crunch" in GameManager.MINIGAME_REGISTRY.
+- Verification: Godot headless run passed. Integration test `bash tests/run_integration.sh "Number Crunch"` passed with both host and client reaching EndGame with positive scores.

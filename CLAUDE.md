@@ -96,4 +96,4 @@ tests/               # test files (test_*.gd)
 5. **Array bounds**: Any indexed access (`array[i]`) must verify the array is non-empty and index is in range
 6. **RPC state safety**: If an RPC is `call_local` and the caller reads state after, verify the local call doesn't clobber that state
 7. **Game flow trace**: Mentally trace the full path: menu → lobby → start_game → advance_round → minigame scene loads → score submit → scoreboard → next round. Confirm no step accesses empty/uninitialized data
-8. **Integration test**: Run `bash tests/run_integration.sh`. Both host and client must reach EndGame with non-zero scores.
+8. **Integration test**: Run `bash tests/run_integration.sh`. Both host and client must reach EndGame with non-zero scores. For per-minigame testing: `bash tests/run_integration.sh "Button Masher"` (plays that game + 1 random game). Multiple games: `bash tests/run_integration.sh "Button Masher" "Dodge Falling"`.

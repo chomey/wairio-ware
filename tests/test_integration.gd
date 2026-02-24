@@ -46,8 +46,32 @@ func _ready() -> void:
 	_log("Test started: " + ("HOST" if _is_host else "CLIENT"))
 	_log("PID: " + str(OS.get_process_id()))
 
-	# Override total rounds for faster testing
-	GameManager.total_rounds = TEST_ROUNDS
+	# Parse --test-games=Name1,Name2 from CLI args
+	var test_games: Array[String] = []
+	for arg: String in args:
+		if arg.begins_with("--test-games="):
+			var games_str: String = arg.substr("--test-games=".length())
+			for game_name: String in games_str.split(","):
+				var trimmed: String = game_name.strip_edges()
+				if trimmed != "":
+					test_games.append(trimmed)
+
+	if test_games.size() > 0:
+		# Auto-append a random different game if only 1 specified (for transition testing)
+		if test_games.size() == 1:
+			var all_names: Array = GameManager.MINIGAME_REGISTRY.keys()
+			all_names.shuffle()
+			for mg_name: String in all_names:
+				if mg_name != test_games[0]:
+					test_games.append(mg_name)
+					break
+		_log("Forced minigames: " + str(test_games))
+		GameManager.forced_minigames.clear()
+		for mg_name: String in test_games:
+			GameManager.forced_minigames.append(mg_name)
+	else:
+		# Default: override total rounds for faster testing
+		GameManager.total_rounds = TEST_ROUNDS
 
 	# Connect to player registry changes
 	NetworkManager.player_connected.connect(_on_player_connected)
@@ -247,6 +271,8 @@ func _handle_minigame(delta: float, current_scene: Node) -> void:
 		_sim_dodge_falling(delta)
 	elif sn == "RhythmTap":
 		_sim_rhythm_tap(delta, current_scene)
+	else:
+		_sim_generic(delta)
 
 
 func _sim_spacebar_press() -> void:
@@ -349,6 +375,24 @@ func _sim_rhythm_tap(delta: float, scene: Node) -> void:
 	if best_diff <= 0.15:
 		_sim_spacebar_press()
 		_rhythm_cooldown = 0.3
+
+
+func _sim_generic(delta: float) -> void:
+	# Generic fallback: alternate spacebar presses and left/right movement
+	_minigame_action_timer += delta
+	if _minigame_action_timer >= 0.2:
+		_minigame_action_timer = 0.0
+		_sim_spacebar_press()
+	_dodge_toggle_timer += delta
+	if _dodge_toggle_timer >= 0.8:
+		_dodge_toggle_timer = 0.0
+		if _dodge_moving_left:
+			Input.action_release("ui_left")
+			Input.action_press("ui_right")
+		else:
+			Input.action_release("ui_right")
+			Input.action_press("ui_left")
+		_dodge_moving_left = not _dodge_moving_left
 
 
 func _clear_log() -> void:
